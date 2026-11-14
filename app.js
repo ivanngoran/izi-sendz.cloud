@@ -210,7 +210,7 @@
         return;
       }
       contactStatus.hidden = false;
-      contactStatus.textContent = "Merci ! Votre demande est prête — écrivez-nous à contact@izi-sendz.com pour l’envoyer.";
+      contactStatus.textContent = "Merci ! Votre demande est prête — écrivez-nous à contact@izi-sendz.cloud pour l’envoyer.";
     });
   }
 

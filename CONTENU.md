@@ -108,7 +108,7 @@ Envoi unitaire et campagnes via API REST. Clé via en-tête API, JWT pour le tab
 Formulaire : nom, entreprise, téléphone, volume mensuel estimé (select), message. Validation native + message de confirmation local (pas de `mailto:` — brancher sur `POST /contact` quand le backend expose la route). Case opt-in obligatoire.
 
 ### 4.12 Footer
-Produit · Tarifs · Doc API · Contact (Abidjan, CI — contact@izi-sendz.com) · Légal : Mentions · Confidentialité · « Unités valables jusqu’épuisement » · © 2026 izi sendz.
+Produit · Tarifs · Doc API · Contact (Abidjan, CI — contact@izi-sendz.cloud) · Légal : Mentions · Confidentialité · « Unités valables jusqu’épuisement » · © 2026 izi sendz.
 
 ## 5. Conformité (règles SHIELD à imposer)
 
