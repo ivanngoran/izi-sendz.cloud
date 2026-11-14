@@ -12,7 +12,7 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="izi sendz — Envoyez vos SMS en Afrique">
 <meta name="twitter:description" content="Campagnes promo, OTP et notifications par SMS. Packs sans abonnement dès 2 000 F.">
-<link rel="canonical" href="https://www.izi-sendz.com/">
+<link rel="canonical" href="https://izi-sendz.cloud/">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"izi sendz","applicationCategory":"BusinessApplication","operatingSystem":"Web","description":"Campagnes promo, codes OTP et notifications par SMS en Afrique.","offers":{"@type":"Offer","price":"2000","priceCurrency":"XOF"}}</script>
 <link rel="icon" type="image/png" href="assets/logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -41,7 +41,7 @@
       <a href="#faq">FAQ</a>
     </nav>
     <div class="header-cta">
-      <a class="btn btn-ghost" href="/login">Se connecter</a>
+      <a class="btn btn-ghost" href="https://app.izi-sendz.cloud/login">Se connecter</a>
       <a class="btn btn-primary" href="#essai">Essayer maintenant</a>
     </div>
   </div>
@@ -231,11 +231,11 @@
       <div class="dev-grid">
         <div class="code-wrap">
           <button class="copy" id="copy-code">Copier</button>
-          <pre data-codeblock="curl"><code>curl -X POST https://api.izi-sendz.com/api/v1/tenant/messages/send \
+          <pre data-codeblock="curl"><code>curl -X POST https://api.izi-sendz.cloud/api/v1/tenant/messages/send \
   -H "X-Api-Key: VOTRE_CLE" \
   -H "Content-Type: application/json" \
   -d '{"address":"tel:+2250700000001","content":"Votre code : 4821","senderName":"IZISMS"}'</code></pre>
-          <pre data-codeblock="js" hidden><code>const res = await fetch("https://api.izi-sendz.com/api/v1/tenant/messages/send", {
+          <pre data-codeblock="js" hidden><code>const res = await fetch("https://api.izi-sendz.cloud/api/v1/tenant/messages/send", {
   method: "POST",
   headers: { "X-Api-Key": "VOTRE_CLE", "Content-Type": "application/json" },
   body: JSON.stringify({ address: "tel:+2250700000001", content: "Votre code : 4821", senderName: "IZISMS" })
@@ -245,12 +245,12 @@ console.log(data.resourceId);</code></pre>
           <pre data-codeblock="py" hidden><code>import requests
 
 res = requests.post(
-    "https://api.izi-sendz.com/api/v1/tenant/messages/send",
+    "https://api.izi-sendz.cloud/api/v1/tenant/messages/send",
     headers={"X-Api-Key": "VOTRE_CLE"},
     json={"address": "tel:+2250700000001", "content": "Votre code : 4821", "senderName": "IZISMS"},
 )
 print(res.json())</code></pre>
-          <pre data-codeblock="php" hidden><code>$ch = curl_init("https://api.izi-sendz.com/api/v1/tenant/messages/send");
+          <pre data-codeblock="php" hidden><code>$ch = curl_init("https://api.izi-sendz.cloud/api/v1/tenant/messages/send");
 curl_setopt_array($ch, [
   CURLOPT_POST =&gt; true,
   CURLOPT_HTTPHEADER =&gt; ["X-Api-Key: VOTRE_CLE", "Content-Type: application/json"],
@@ -261,7 +261,7 @@ echo curl_exec($ch);</code></pre>
           <pre data-codeblock="cs" hidden><code>using var http = new HttpClient();
 http.DefaultRequestHeaders.Add("X-Api-Key", "VOTRE_CLE");
 var res = await http.PostAsJsonAsync(
-    "https://api.izi-sendz.com/api/v1/tenant/messages/send",
+    "https://api.izi-sendz.cloud/api/v1/tenant/messages/send",
     new { address = "tel:+2250700000001", content = "Votre code : 4821", senderName = "IZISMS" });
 Console.WriteLine(await res.Content.ReadAsStringAsync());</code></pre>
         </div>

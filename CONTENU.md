@@ -123,8 +123,8 @@ Produit · Tarifs · Doc API · Contact (Abidjan, CI — contact@izi-sendz.com) 
 - **Site statique d'abord** (Astro ou Hugo ou HTML simple), pas Angular : la vitrine n'a pas besoin du dashboard Angular 22. Rapide, SEO FR parfait, hébergeable partout (GitHub Pages / Netlify / VPS existant).
 - **Charte appliquée :** fond blanc, bleu `#0B51ED` action, violet `#6213C7` accent, dégradé `135deg` réservé au CTA hero, Sora titres + Inter texte, Lucide two-tone, angles 4 px, logo `docs/references/main_logo.png` tel quel.
 - **Formulaires sans backend :** validation native + confirmation locale dans un premier temps ; brancher ensuite sur l'API .NET (`POST /contact`) quand le backend expose la route.
-- **Header :** `Se connecter` → `/login` (app), `Essayer maintenant` → `#essai`. Menu burger + drawer sur mobile (Escape pour fermer).
-- **Liens :** doc API → Scalar/OpenAPI du backend (`/openapi/v1.json`), dashboard → sous-domaine `app.` quand Angular livré. Aucun secret dans le site.
+- **Header :** `Se connecter` → `https://app.izi-sendz.cloud/login`, `Essayer maintenant` → `#essai`. Menu burger + drawer sur mobile (Escape pour fermer).
+- **Liens :** doc API → Scalar/OpenAPI du backend (`https://api.izi-sendz.cloud/openapi/v1.json`, backend derrière `api-backend.izi-sendz.cloud`), dashboard → `https://app.izi-sendz.cloud`. Aucun secret dans le site.
 - **SEO :** 1 page FR, `<title>` « izi sendz — Envoi SMS Côte d'Ivoire : campagnes, OTP, API », meta description, sitemap, images avec `alt`, temps de chargement < 1,5 s.
 
 ## 7. Prochaine étape proposée

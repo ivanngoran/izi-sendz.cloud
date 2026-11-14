@@ -24,9 +24,9 @@ Ouvrir http://localhost:3000 (ou :8000).
 
 ## Config à adapter au déploiement
 
-- Domaine canonique dans `index.html` : `https://www.izi-sendz.com/`
-- Lien `Se connecter` (`/login`) → URL du backoffice
-- Extraits API `https://api.izi-sendz.com/...` → base API réelle
+- Domaine canonique dans `index.html` : `https://izi-sendz.cloud/`
+- Lien `Se connecter` → `https://app.izi-sendz.cloud/login`
+- Extraits API → `https://api.izi-sendz.cloud/...` (public ; backend derrière `api-backend.izi-sendz.cloud`)
 - Contact `contact@izi-sendz.com`
 - Page `mentions-legales.html` : hébergeur à compléter
 
