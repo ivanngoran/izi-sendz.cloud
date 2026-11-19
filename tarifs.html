@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tarifs — izi-sendz : SMS 25 FCFA, WhatsApp 3 FCFA</title>
+<meta name="description" content="SMS Afrique 25 FCFA l'unité, WhatsApp 3 FCFA le message. Un seul crédit, sans abonnement. Gros volumes sur devis.">
+<meta property="og:title" content="Tarifs — izi-sendz">
+<meta property="og:description" content="SMS 25 FCFA, WhatsApp 3 FCFA, sans abonnement. 1 crédit = 1 unité.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="assets/logo.png">
+<link rel="canonical" href="https://izi-sendz.cloud/tarifs.html">
+<link rel="icon" type="image/png" href="assets/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<a class="skip" href="#contenu">Aller au contenu</a>
+
+<header class="header">
+  <div class="container header-inner">
+    <a class="brand" href="index.html" aria-label="izi-sendz — accueil">
+      <img src="assets/logo.png" alt="izi sendz" width="40" height="30">
+      <span>izi sendz</span>
+    </a>
+    <button class="burger" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="site-nav">
+      <span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span>
+    </button>
+    <nav class="nav" id="site-nav" aria-label="Navigation principale">
+      <a href="fonctionnalites.html">Fonctionnalités</a>
+      <a href="tarifs.html" aria-current="page">Tarifs</a>
+      <a href="developpeurs.html">Développeurs</a>
+      <a href="index.html#faq">FAQ</a>
+    </nav>
+    <div class="header-cta">
+      <a class="btn btn-ghost" href="https://app.izi-sendz.cloud/login">Se connecter</a>
+      <a class="btn btn-primary" href="https://app.izi-sendz.cloud/signup">Tester gratuitement</a>
+    </div>
+  </div>
+</header>
+
+<main id="contenu">
+
+  <div class="container page-hero">
+    <h1>Des tarifs simples, sans abonnement.</h1>
+    <p class="section-lead">Un seul crédit, une seule unité : 1 SMS = 1 unité, 1 message WhatsApp = 1 unité. Vos unités restent disponibles jusqu'à épuisement. Paiement par mobile money et cartes.</p>
+  </div>
+
+  <section class="section reveal">
+    <div class="container">
+      <table class="tariff" aria-label="Grille tarifaire">
+        <thead>
+          <tr><th scope="col">Service</th><th scope="col">Destination</th><th scope="col">Tarif</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>SMS</td><td>Côte d'Ivoire</td><td class="amount-cell">25 FCFA / unité</td></tr>
+          <tr><td>SMS</td><td>Autres pays d'Afrique (Ouest et Centre)</td><td class="amount-cell">25 FCFA / unité</td></tr>
+          <tr><td>WhatsApp</td><td>Numéro officiel</td><td class="amount-cell">3 FCFA / message</td></tr>
+          <tr><td>Tous canaux</td><td>Gros volumes (au-delà de 10 000 / mois), autres destinations</td><td class="amount-cell">Sur devis</td></tr>
+        </tbody>
+      </table>
+      <p class="note muted">1 crédit = 1 unité. Le statut exact de chaque message est affiché dans votre espace client.</p>
+    </div>
+  </section>
+
+  <section class="section alt reveal">
+    <div class="container">
+      <h2>Estimez votre budget</h2>
+      <p class="section-lead">Choisissez un canal et un volume mensuel : le total s'affiche aussitôt.</p>
+      <div class="calc" role="group" aria-label="Simulateur de budget">
+        <label> Canal
+          <select id="sim-canal">
+            <option value="sms">SMS — 25 FCFA / unité</option>
+            <option value="whatsapp">WhatsApp — 3 FCFA / message</option>
+          </select>
+        </label>
+        <label for="sim-range"><strong>Combien de messages par mois ?</strong> <output id="sim-vol" aria-live="polite">1 000 SMS</output></label>
+        <input type="range" id="sim-range" min="100" max="20000" step="100" value="1000" aria-describedby="sim-result">
+        <p class="calc-result" id="sim-result" aria-live="polite">Estimation : 25 000 FCFA (25 FCFA/unité)</p>
+        <p><a class="btn btn-primary" id="sim-cta" href="https://app.izi-sendz.cloud/signup">Tester gratuitement</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section cta-final reveal">
+    <div class="container">
+      <h2>Prêt à envoyer vos premiers messages ?</h2>
+      <p class="section-lead">Un seul contrat, un seul crédit : SMS + WhatsApp.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary btn-lg" href="https://app.izi-sendz.cloud/signup">Tester gratuitement</a>
+        <a class="btn btn-outline btn-lg" href="https://wa.me/2250708616289">Discuter sur WhatsApp</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container footer-grid">
+    <div>
+      <p><strong>izi sendz</strong> — Campagnes SMS et notifications WhatsApp.</p>
+      <p class="muted">Abidjan, Côte d’Ivoire — <a href="mailto:contact@izi-sendz.cloud">contact@izi-sendz.cloud</a></p>
+      <p class="muted">© 2026 izi sendz. Unités valables jusqu’épuisement.</p>
+    </div>
+    <nav aria-label="Pied de page">
+      <a href="fonctionnalites.html">Fonctionnalités</a>
+      <a href="tarifs.html">Tarifs</a>
+      <a href="developpeurs.html">Développeurs</a>
+      <a href="index.html#faq">FAQ</a>
+      <a href="index.html#essai">Contact</a>
+    </nav>
+    <nav aria-label="Légal">
+      <a href="mentions-legales.html">Mentions légales</a>
+      <a href="confidentialite.html">Confidentialité</a>
+    </nav>
+  </div>
+</footer>
+
+<button id="to-top" aria-label="Retour en haut">↑</button>
+
+<script src="app.js" defer></script>
+</body>
+</html>

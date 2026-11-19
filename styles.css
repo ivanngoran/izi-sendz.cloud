@@ -122,6 +122,14 @@ pre code { background: none; padding: 0; color: inherit; }
 .footer a:hover { color: var(--izi-blue-600); }
 
 /* --- Dynamique : skip, rotateur, téléphone, onglets, simulateur, Afrique, calc, reveal --- */
+.page-hero { padding: 48px 0 8px; }
+.band { display: grid; gap: 16px; }
+.func-cta { margin-top: 14px; display: flex; gap: 10px; flex-wrap: wrap; }
+.tariff { width: 100%; border-collapse: collapse; margin-top: 20px; background: #fff; border: 1px solid var(--border); font-size: 14px; }
+.tariff th, .tariff td { text-align: left; padding: 12px 14px; border-bottom: 1px solid var(--border); }
+.tariff th { background: var(--surface); font-size: 12px; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-muted); }
+.tariff tr:last-child td { border-bottom: none; }
+.tariff .amount-cell { font-weight: 700; color: var(--izi-blue-600); white-space: nowrap; }
 .skip { position: absolute; left: -9999px; top: 0; background: var(--izi-blue-600); color: #fff; padding: 8px 16px; z-index: 100; border-radius: 0 0 var(--radius-sm) 0; }
 .skip:focus { left: 0; }
 

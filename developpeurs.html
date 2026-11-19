@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Développeurs — izi-sendz : un seul contrat d'envoi API</title>
+<meta name="description" content="API unifiée izi-sendz : un seul contrat d'envoi (service, canal, pays). Exemples d'appel SMS et WhatsApp, webhooks d'accusés.">
+<meta property="og:title" content="Développeurs — izi-sendz">
+<meta property="og:description" content="Un seul contrat d'envoi : service, canal, pays. Exemples d'appel et webhooks.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="assets/logo.png">
+<link rel="canonical" href="https://izi-sendz.cloud/developpeurs.html">
+<link rel="icon" type="image/png" href="assets/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<a class="skip" href="#contenu">Aller au contenu</a>
+
+<header class="header">
+  <div class="container header-inner">
+    <a class="brand" href="index.html" aria-label="izi-sendz — accueil">
+      <img src="assets/logo.png" alt="izi sendz" width="40" height="30">
+      <span>izi sendz</span>
+    </a>
+    <button class="burger" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="site-nav">
+      <span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span>
+    </button>
+    <nav class="nav" id="site-nav" aria-label="Navigation principale">
+      <a href="fonctionnalites.html">Fonctionnalités</a>
+      <a href="tarifs.html">Tarifs</a>
+      <a href="developpeurs.html" aria-current="page">Développeurs</a>
+      <a href="index.html#faq">FAQ</a>
+    </nav>
+    <div class="header-cta">
+      <a class="btn btn-ghost" href="https://app.izi-sendz.cloud/login">Se connecter</a>
+      <a class="btn btn-primary" href="https://app.izi-sendz.cloud/signup">Tester gratuitement</a>
+    </div>
+  </div>
+</header>
+
+<main id="contenu">
+
+  <div class="container page-hero">
+    <h1>Un seul contrat d'envoi.</h1>
+    <p class="section-lead">Service, canal, pays : trois champs, un seul appel. Vos développeurs intègrent une fois, vous changez de canal sans changer de code.</p>
+  </div>
+
+  <section class="section reveal">
+    <div class="container">
+      <h2>Le contrat, en bref</h2>
+      <div class="cards-3">
+        <article class="card"><h3>service</h3><p>Ce que vous envoyez : <code>sms</code>, <code>whatsapp</code>, <code>otp</code>. Un seul crédit, facturation par canal utilisé.</p></article>
+        <article class="card"><h3>canal</h3><p>Comment ça part : <code>sms</code> ou <code>whatsapp</code>. Même campagne, chaque canal avec sa validation.</p></article>
+        <article class="card"><h3>pays</h3><p>Où ça part : <code>CI</code> et Afrique de l'Ouest et du Centre. Une grille, un crédit.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section alt reveal">
+    <div class="container">
+      <h2>Exemples d'appel</h2>
+      <p class="section-lead">Envoi via API REST. Clé via en-tête <code>X-Api-Key</code> (clé test disponible dans le bac à sable). Webhooks d'accusés : livré, lu, impossible.</p>
+      <div class="tabs" role="tablist" aria-label="Exemples de code">
+        <button class="tab is-active" role="tab" aria-selected="true" data-code="curl">cURL</button>
+        <button class="tab" role="tab" aria-selected="false" data-code="js">JavaScript</button>
+        <button class="tab" role="tab" aria-selected="false" data-code="py">Python</button>
+      </div>
+      <div class="dev-grid">
+        <div class="code-wrap">
+          <button class="copy" id="copy-code">Copier</button>
+          <pre data-codeblock="curl"><code>curl -X POST https://api.izi-sendz.cloud/api/v1/tenant/messages/send \
+  -H "X-Api-Key: VOTRE_CLE" \
+  -H "Content-Type: application/json" \
+  -d '{"service":"sms","channel":"sms","country":"CI","address":"tel:+2250700000001","content":"Rappel : RDV demain à 10h. Répondez OUI pour confirmer.","senderName":"MABOUTIQUE"}'</code></pre>
+          <pre data-codeblock="js" hidden><code>const res = await fetch("https://api.izi-sendz.cloud/api/v1/tenant/messages/send", {
+  method: "POST",
+  headers: { "X-Api-Key": "VOTRE_CLE", "Content-Type": "application/json" },
+  body: JSON.stringify({ service: "sms", channel: "sms", country: "CI", address: "tel:+2250700000001", content: "Rappel : RDV demain à 10h. Répondez OUI pour confirmer.", senderName: "MABOUTIQUE" })
+});
+const data = await res.json();
+console.log(data.resourceId);</code></pre>
+          <pre data-codeblock="py" hidden><code>import requests
+
+res = requests.post(
+    "https://api.izi-sendz.cloud/api/v1/tenant/messages/send",
+    headers={"X-Api-Key": "VOTRE_CLE"},
+    json={"service": "sms", "channel": "sms", "country": "CI", "address": "tel:+2250700000001", "content": "Rappel : RDV demain à 10h. Répondez OUI pour confirmer.", "senderName": "MABOUTIQUE"},
+)
+print(res.json())</code></pre>
+        </div>
+        <div class="cta-col">
+          <p><span class="badge ok">Bac à sable inclus</span></p>
+          <a class="btn btn-primary" href="https://app.izi-sendz.cloud/signup">Obtenir une clé test</a>
+          <p class="muted">Bac à sable inclus pour tester sans créditer de vraies unités.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section reveal">
+    <div class="container">
+      <h2>OTP via API : WhatsApp puis repli SMS</h2>
+      <p class="section-lead">Votre application appelle l'API avec le numéro de votre cible : l'OTP part par WhatsApp, avec repli SMS si WhatsApp n'est pas reçu. Facturation : unités SMS et WhatsApp selon les canaux intervenus ; le message WhatsApp est servi si vous disposez d'unités WhatsApp.</p>
+      <div class="code-wrap">
+        <pre><code>{
+  "service": "otp",
+  "channel": "whatsapp",
+  "fallbackChannel": "sms",
+  "country": "CI",
+  "address": "tel:+2250700000001",
+  "content": "Votre code : 4821. Il expire dans 5 min."
+}</code></pre>
+      </div>
+      <div class="func-cta">
+        <a class="btn btn-primary" href="https://app.izi-sendz.cloud/signup">Tester gratuitement</a>
+        <a class="btn btn-outline" href="https://wa.me/2250708616289">Onboarding WhatsApp</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section cta-final reveal">
+    <div class="container">
+      <h2>Prêt à brancher l'API ?</h2>
+      <p class="section-lead">Clé test en quelques minutes, bac à sable inclus.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary btn-lg" href="https://app.izi-sendz.cloud/signup">Tester gratuitement</a>
+        <a class="btn btn-outline btn-lg" href="tarifs.html">Voir les tarifs</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container footer-grid">
+    <div>
+      <p><strong>izi sendz</strong> — Campagnes SMS et notifications WhatsApp.</p>
+      <p class="muted">Abidjan, Côte d’Ivoire — <a href="mailto:contact@izi-sendz.cloud">contact@izi-sendz.cloud</a></p>
+      <p class="muted">© 2026 izi sendz. Unités valables jusqu’épuisement.</p>
+    </div>
+    <nav aria-label="Pied de page">
+      <a href="fonctionnalites.html">Fonctionnalités</a>
+      <a href="tarifs.html">Tarifs</a>
+      <a href="developpeurs.html">Développeurs</a>
+      <a href="index.html#faq">FAQ</a>
+      <a href="index.html#essai">Contact</a>
+    </nav>
+    <nav aria-label="Légal">
+      <a href="mentions-legales.html">Mentions légales</a>
+      <a href="confidentialite.html">Confidentialité</a>
+    </nav>
+  </div>
+</footer>
+
+<button id="to-top" aria-label="Retour en haut">↑</button>
+
+<script src="app.js" defer></script>
+</body>
+</html>

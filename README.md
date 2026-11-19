@@ -15,9 +15,12 @@ Ouvrir http://localhost:3000 (ou :8000).
 
 | Fichier | Rôle |
 |---|---|
-| `index.html` | One-page + SEO/OG + JSON-LD |
+| `index.html` | Accueil : hero multi-canal, 2 canaux, tarifs, FAQ, CTA final |
+| `fonctionnalites.html` | Les 11 fonctions (bénéfice + exemple + CTA) |
+| `tarifs.html` | Grille par pays + simulateur canal × volume |
+| `developpeurs.html` | Contrat d'envoi unique + exemples + OTP via API |
 | `styles.css` | Styles (clair uniquement) |
-| `app.js` | Menu mobile, hero, simulateur SMS, calculateur packs, FAQ |
+| `app.js` | Menu mobile, hero, simulateur SMS, simulateur tarifs, FAQ, onglets |
 | `confidentialite.html`, `mentions-legales.html` | Pages légales |
 | `assets/logo.png` | Logo |
 | `CONTENU.md` | Copywriting source (à valider avant modif du HTML) |
@@ -29,6 +32,8 @@ Ouvrir http://localhost:3000 (ou :8000).
 - Extraits API → `https://api.izi-sendz.cloud/...` (public ; backend derrière `api-backend.izi-sendz.cloud`)
 - Contact `contact@izi-sendz.cloud`
 - Page `mentions-legales.html` : hébergeur à compléter
+- Contact WhatsApp : `https://wa.me/2250708616289` (numéro de TEST — basculer sur le numéro prod au lancement : chercher/remplacer dans les 4 pages)
+- Offre affichée : SMS 25 FCFA/unité, WhatsApp 3 FCFA/message, 1 crédit = 1 unité, gros volumes sur devis
 
 ## Déploiement
 

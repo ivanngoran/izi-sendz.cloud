@@ -163,55 +163,34 @@
     });
   }
 
-  /* 2. Calculateur de pack */
-  var PACKS = [
-    { units: 100, price: 2000 },
-    { units: 1000, price: 15000 },
-    { units: 5000, price: 60000 },
-    { units: 10000, price: 100000 }
-  ];
-  var calcRange = document.getElementById("calc-range");
-  var calcVol = document.getElementById("calc-vol");
-  var calcResult = document.getElementById("calc-result");
-  var calcCta = document.getElementById("calc-cta");
+  /* 2. Calculateur de credit (page Tarifs : canal + volume -> estimation) */
+  var simCanal = document.getElementById("sim-canal");
+  var simRange = document.getElementById("sim-range");
+  var simVol = document.getElementById("sim-vol");
+  var simResult = document.getElementById("sim-result");
+  var simCta = document.getElementById("sim-cta");
+  var RATES = { sms: 25, whatsapp: 3 };
   function fmt(n) { return n.toLocaleString("fr-FR").replace(/,/g, " "); }
-  function renderCalc() {
-    var vol = parseInt(calcRange.value, 10);
-    calcVol.textContent = fmt(vol) + " SMS";
-    calcRange.setAttribute("aria-valuetext", fmt(vol) + " SMS par mois");
-    var pick = PACKS[PACKS.length - 1];
-    for (var j = 0; j < PACKS.length; j++) {
-      if (PACKS[j].units >= vol) { pick = PACKS[j]; break; }
-    }
+  function renderSimTarif() {
+    if (!simRange || !simCanal) return;
+    var vol = parseInt(simRange.value, 10);
+    var rate = RATES[simCanal.value] || 25;
+    var unit = simCanal.value === "whatsapp" ? "messages WhatsApp" : "SMS";
+    if (simVol) simVol.textContent = fmt(vol) + " " + unit;
+    simRange.setAttribute("aria-valuetext", fmt(vol) + " " + unit + " par mois");
+    var total = vol * rate;
     if (vol > 10000) {
-      calcResult.textContent = "Au-delà de 10 000 SMS : contactez-nous pour un devis.";
-      if (calcCta) calcCta.textContent = "Demander un devis";
+      if (simResult) simResult.textContent = "Estimation : " + fmt(total) + " FCFA — au-delà de 10 000, demandez un devis volume.";
+      if (simCta) { simCta.textContent = "Discuter sur WhatsApp"; simCta.setAttribute("href", "https://wa.me/2250708616289"); }
     } else {
-      var per = (pick.price / pick.units).toFixed(0);
-      calcResult.textContent = "Pack " + fmt(pick.units) + " unités — " + fmt(pick.price) + " XOF (" + per + " XOF/SMS)";
-      if (calcCta) calcCta.textContent = "Commander le pack " + fmt(pick.units);
+      if (simResult) simResult.textContent = "Estimation : " + fmt(total) + " FCFA (" + rate + " FCFA/" + (simCanal.value === "whatsapp" ? "message" : "unité") + ")";
+      if (simCta) { simCta.textContent = "Tester gratuitement"; simCta.setAttribute("href", "https://app.izi-sendz.cloud/signup"); }
     }
   }
-  if (calcRange) {
-    calcRange.addEventListener("input", renderCalc);
-    renderCalc();
-  }
-
-  /* Formulaire de contact : validation + message local (pas de mailto) */
-  var contactForm = document.getElementById("contact-form");
-  var contactStatus = document.getElementById("contact-status");
-  if (contactForm && contactStatus) {
-    contactForm.addEventListener("submit", function (e) {
-      e.preventDefault();
-      if (!contactForm.checkValidity()) {
-        contactStatus.hidden = false;
-        contactStatus.textContent = "Vérifiez les champs requis (nom, entreprise, téléphone, consentement).";
-        contactForm.reportValidity();
-        return;
-      }
-      contactStatus.hidden = false;
-      contactStatus.textContent = "Merci ! Votre demande est prête — écrivez-nous à contact@izi-sendz.cloud pour l’envoyer.";
-    });
+  if (simRange && simCanal) {
+    simRange.addEventListener("input", renderSimTarif);
+    simCanal.addEventListener("change", renderSimTarif);
+    renderSimTarif();
   }
 
   /* 5. Reveal on scroll + scrollspy + retour haut */

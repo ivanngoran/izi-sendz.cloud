@@ -3,17 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>izi sendz — Envoyez vos SMS en Afrique : campagnes, OTP, API</title>
-<meta name="description" content="izi sendz : campagnes promo, codes OTP et notifications par SMS. Tableau de bord simple ou API. Packs sans abonnement dès 2 000 F. Disponible en Côte d'Ivoire, pensé pour l'Afrique.">
-<meta property="og:title" content="izi sendz — Envoyez vos SMS en Afrique : campagnes, OTP, API">
-<meta property="og:description" content="Campagnes promo, codes OTP et notifications par SMS. Tableau de bord simple ou API, accusé par message, packs sans abonnement dès 2 000 F.">
+<title>izi-sendz — Messagerie multi-canal SMS + WhatsApp pour l'Afrique</title>
+<meta name="description" content="izi-sendz : campagnes SMS, notifications WhatsApp, API unifiée. Un seul contrat, un seul crédit. SMS 25 FCFA, WhatsApp 3 FCFA, sans abonnement.">
+<meta property="og:title" content="izi-sendz — Messagerie multi-canal SMS + WhatsApp pour l'Afrique">
+<meta property="og:description" content="Campagnes SMS, notifications WhatsApp, API unifiée. Un seul contrat, un seul crédit, sans abonnement.">
 <meta property="og:type" content="website">
 <meta property="og:image" content="assets/logo.png">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="izi sendz — Envoyez vos SMS en Afrique">
-<meta name="twitter:description" content="Campagnes promo, OTP et notifications par SMS. Packs sans abonnement dès 2 000 F.">
+<meta name="twitter:title" content="izi-sendz — Messagerie multi-canal SMS + WhatsApp">
+<meta name="twitter:description" content="SMS 25 FCFA, WhatsApp 3 FCFA, sans abonnement. Un seul contrat, un seul crédit.">
 <link rel="canonical" href="https://izi-sendz.cloud/">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"izi sendz","applicationCategory":"BusinessApplication","operatingSystem":"Web","description":"Campagnes promo, codes OTP et notifications par SMS en Afrique.","offers":{"@type":"Offer","price":"2000","priceCurrency":"XOF"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"izi-sendz","applicationCategory":"BusinessApplication","operatingSystem":"Web","description":"Messagerie multi-canal SMS et WhatsApp pour l'Afrique de l'Ouest et du Centre : campagnes, notifications, API unifiée."}</script>
 <link rel="icon" type="image/png" href="assets/logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -34,15 +34,14 @@
       <span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span>
     </button>
     <nav class="nav" id="site-nav" aria-label="Navigation principale">
-      <a href="#produit">Produit</a>
-      <a href="#cas-usage">Cas d'usage</a>
-      <a href="#tarifs">Tarifs</a>
-      <a href="#devs">Développeurs</a>
+      <a href="fonctionnalites.html">Fonctionnalités</a>
+      <a href="tarifs.html">Tarifs</a>
+      <a href="developpeurs.html">Développeurs</a>
       <a href="#faq">FAQ</a>
     </nav>
     <div class="header-cta">
       <a class="btn btn-ghost" href="https://app.izi-sendz.cloud/login">Se connecter</a>
-      <a class="btn btn-primary" href="https://app.izi-sendz.cloud/signup">Essayer maintenant</a>
+      <a class="btn btn-primary" href="https://app.izi-sendz.cloud/signup">Tester gratuitement</a>
     </div>
   </div>
 </header>
@@ -53,18 +52,19 @@
     <div class="hero-bg" aria-hidden="true"><div class="hero-bubbles" id="hero-bubbles"></div></div>
     <div class="container hero-grid">
       <div>
-        <h1>Vos SMS arrivent.<br>Vos clients <span class="rotator" aria-live="polite"><span class="rotator-word is-active">répondent.</span><span class="rotator-word">reviennent.</span><span class="rotator-word">paient.</span></span></h1>
-        <p class="lead">Campagnes promo, codes OTP et notifications — envoyez à des milliers de clients depuis un tableau de bord simple ou votre API, avec un accusé de réception pour chaque message. Disponible en Côte d'Ivoire, pensé pour l'Afrique.</p>
+        <h1>La messagerie multi-canal pour l'Afrique de l'Ouest et du Centre.</h1>
+        <p class="lead">Un seul contrat, un seul crédit : SMS + WhatsApp. Campagnes, notifications et rappels depuis votre espace client ou votre API.</p>
         <ul class="proofs">
-          <li>Envoi à 5 SMS/s</li>
-          <li>Accusé pour chaque message</li>
-          <li>API REST + bac à sable</li>
+          <li>SMS + WhatsApp</li>
+          <li>Un seul crédit</li>
+          <li>Sans abonnement</li>
         </ul>
         <div class="cta-row">
-          <a class="btn btn-primary btn-lg" href="#simulateur">Tester mon message</a>
-          <a class="btn btn-outline btn-lg" href="#devs">Voir la doc API</a>
+          <a class="btn btn-primary btn-lg" href="https://app.izi-sendz.cloud/signup">Tester gratuitement</a>
+          <a class="btn btn-outline btn-lg" href="tarifs.html">Voir les tarifs</a>
+          <a class="btn btn-outline btn-lg" href="https://wa.me/2250708616289">WhatsApp</a>
         </div>
-        <p class="micro">Expéditeur personnalisé inclus dans tous les packs · 160 caractères contrôlés · Packs sans abonnement dès 2 000 F</p>
+        <p class="micro">SMS 25 FCFA/unité · WhatsApp 3 FCFA/message · Unités valables jusqu'épuisement</p>
       </div>
       <div class="mock phone" aria-label="Aperçu d'un SMS envoyé avec izi sendz">
         <div class="phone-notch" aria-hidden="true"></div>
@@ -84,10 +84,36 @@
     </div>
   </section>
 
+  <section id="canaux" class="section reveal">
+    <div class="container">
+      <h2>Deux canaux, un seul crédit</h2>
+      <p class="section-lead">Le même crédit paie vos SMS et vos messages WhatsApp. Vous choisissez le canal, nous gérons l'envoi.</p>
+      <div class="cards-3">
+        <article class="card">
+          <h3>Campagnes SMS</h3>
+          <p><strong>Envois en masse programmés</strong>, crédits débités à l'envoi. Nom d'expéditeur personnalisé, accusés de réception.</p>
+          <p class="example">« Soldes -20% ce week-end, clientes fidèles en avant-première ! »</p>
+          <div class="func-cta"><a class="btn btn-outline" href="#simulateur">Tester un message</a></div>
+        </article>
+        <article class="card">
+          <h3>Notifications WhatsApp</h3>
+          <p><strong>Rappels, confirmations et alertes critiques</strong> sur numéro officiel. Réponses automatiques possibles.</p>
+          <p class="example">« Bonjour, votre rendez-vous de demain 10h est confirmé. Répondez OUI pour confirmer. »</p>
+          <div class="func-cta"><a class="btn btn-outline" href="tarifs.html">Voir les tarifs</a></div>
+        </article>
+        <article class="card">
+          <h3>Et bien plus</h3>
+          <p>Numéro WhatsApp par client, campagnes per-canal, API unifiée, achats en ligne, espace client avec suivi.</p>
+          <div class="func-cta"><a class="btn btn-primary" href="fonctionnalites.html">Toutes les fonctionnalités</a></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
   <section id="simulateur" class="section reveal">
     <div class="container">
       <h2>Écrivez-le, voyez-le partir</h2>
-      <p class="section-lead">Tapez votre message et votre nom d'expéditeur — le téléphone affiche le rendu en direct. Expéditeur personnalisé inclus dans tous les packs.</p>
+      <p class="section-lead">Tapez votre message et votre nom d'expéditeur — le téléphone affiche le rendu en direct. Expéditeur personnalisé inclus, sans abonnement.</p>
       <div class="sim-grid">
         <div class="sim-form">
           <label>Nom d'expéditeur <span class="muted">(11 caractères max)</span>
@@ -136,26 +162,26 @@
       <h2>Trois cas d'usage, un seul outil</h2>
       <div class="tabs" role="tablist" aria-label="Cas d'usage">
         <button class="tab is-active" role="tab" aria-selected="true" data-tab="promo">Promo de masse</button>
-        <button class="tab" role="tab" aria-selected="false" data-tab="otp">OTP &amp; transactionnel</button>
-        <button class="tab" role="tab" aria-selected="false" data-tab="notif">Notifications</button>
+        <button class="tab" role="tab" aria-selected="false" data-tab="whatsapp">Notifications WhatsApp</button>
+        <button class="tab" role="tab" aria-selected="false" data-tab="notif">Rappels &amp; alertes</button>
       </div>
       <div class="tab-panels">
         <article class="card tab-panel is-active" data-panel="promo" role="tabpanel">
           <h3>Promo de masse</h3>
           <p class="tagline">Remplissez votre boutique ce week-end.</p>
-          <p>Importez votre CSV, personnalisez avec <code>{prenom}</code> ou <code>{code}</code>, planifiez, suivez les livrés.</p>
+          <p>Importez votre fichier clients, personnalisez avec <code>{prenom}</code> ou <code>{code}</code>, planifiez, suivez les livrés.</p>
           <p class="example">« Bonjour {prenom}, -20% ce samedi avec le code promo '{code}'. Profitez en rapidement ! » <button class="copy" data-copy="Bonjour {prenom}, -20% ce samedi avec le code promo '{code}'. Profitez en rapidement !">Copier</button></p>
         </article>
-        <article class="card tab-panel" data-panel="otp" role="tabpanel" hidden>
-          <h3>OTP &amp; transactionnel</h3>
-          <p class="tagline">Vos clients ne restent jamais bloqués.</p>
-          <p>Codes de connexion, confirmation de paiement, réinitialisation. Envoi unitaire via API, reprises automatiques, statut livré suivi.</p>
-          <p class="example">« Votre code izi sendz : 4821. Il expire dans 5 min. » <button class="copy" data-copy="Votre code izi sendz : 4821. Il expire dans 5 min.">Copier</button></p>
+        <article class="card tab-panel" data-panel="whatsapp" role="tabpanel" hidden>
+          <h3>Notifications WhatsApp</h3>
+          <p class="tagline">Lues en quelques minutes, pas en quelques jours.</p>
+          <p>Rappels de rendez-vous, confirmations de commande, alertes critiques sur numéro officiel. Réponses automatiques possibles.</p>
+          <p class="example">« Bonjour, votre commande est prête. Passez la récupérer aujourd'hui ! » <button class="copy" data-copy="Bonjour, votre commande est prête. Passez la récupérer aujourd'hui !">Copier</button></p>
         </article>
         <article class="card tab-panel" data-panel="notif" role="tabpanel" hidden>
-          <h3>Notifications</h3>
+          <h3>Rappels &amp; alertes</h3>
           <p class="tagline">Chaque rendez-vous honoré.</p>
-          <p>Rappels RDV, alertes livraison, échéances, sensibilisation. Planifiez à date fixe, même à 10 000 destinataires.</p>
+          <p>Rappels RDV, échéances, sensibilisation. Planifiez à date fixe, même à 10 000 destinataires.</p>
           <p class="example">« Rappel : RDV demain à 10h. Répondez OUI pour confirmer. » <button class="copy" data-copy="Rappel : RDV demain à 10h. Répondez OUI pour confirmer.">Copier</button></p>
         </article>
       </div>
@@ -181,8 +207,8 @@
         <article class="card"><h3>Carnets d'adresses</h3><p>Dossiers par audience, schéma de variables imposé, rejets CSV expliqués ligne par ligne.</p></article>
         <article class="card"><h3>Expéditeur à votre nom</h3><p><code>MA-BOUTIQUE</code> au lieu d'un numéro court, validé avant usage.</p></article>
         <article class="card"><h3>Rapports de livraison</h3><p>Livrés, en attente, échoués avec code explicite, export CSV.</p></article>
-        <article class="card"><h3>Clés API &amp; rôles</h3><p>Clé affichée une seule fois, révocable. Rôles : Propriétaire, Admin, Marketing, Développeur.</p></article>
-        <article class="card"><h3>Packs flexibles</h3><p>Sans abonnement, solde par pays, alerte seuil bas, historique d'achats.</p></article>
+        <article class="card"><h3>Clés API &amp; rôles</h3><p>Clé affichée une seule fois, révocable. Rôles : Propriétaire, Marketing, Développeur.</p></article>
+        <article class="card"><h3>Crédit flexible</h3><p>Sans abonnement, unités valables jusqu'épuisement, alerte seuil bas, historique d'achats.</p></article>
       </div>
     </div>
   </section>
@@ -198,32 +224,25 @@
 
   <section id="tarifs" class="section alt reveal">
     <div class="container">
-      <h2>Des packs flexibles, sans abonnement</h2>
-      <p class="section-lead">Paiements flexibles dès 2 000 F pour la Côte d'Ivoire : vous achetez un pack, vos unités restent disponibles jusqu'à épuisement. Nom d'expéditeur personnalisé inclus dans tous les packs.</p>
-      <div class="cards-4">
-        <article class="card price"><h3>100 unités</h3><p class="amount">2 000 XOF</p><p class="per">20 XOF/SMS</p><p>Idéal pour tester.</p></article>
-        <article class="card price featured"><h3>1 000 unités</h3><p class="amount">15 000 XOF</p><p class="per">15 XOF/SMS</p><p>Le plus choisi.</p></article>
-        <article class="card price"><h3>5 000 unités</h3><p class="amount">60 000 XOF</p><p class="per">12 XOF/SMS</p><p>Pour les campagnes régulières.</p></article>
-        <article class="card price"><h3>10 000 unités</h3><p class="amount">100 000 XOF</p><p class="per">10 XOF/SMS</p><p>Pour les gros volumes.</p></article>
+      <h2>Des tarifs simples, sans abonnement</h2>
+      <p class="section-lead">Un seul crédit, une seule unité : 1 SMS = 1 unité, 1 message WhatsApp = 1 unité. Vos unités restent disponibles jusqu'à épuisement.</p>
+      <div class="cards-3">
+        <article class="card price"><h3>SMS Afrique</h3><p class="amount">25 FCFA</p><p class="per">par unité envoyée</p><p>Côte d'Ivoire et Afrique de l'Ouest et du Centre, même contrat, même crédit.</p></article>
+        <article class="card price featured"><h3>WhatsApp</h3><p class="amount">3 FCFA</p><p class="per">par message</p><p>Rappels, confirmations et alertes sur numéro officiel.</p></article>
+        <article class="card price"><h3>Gros volumes</h3><p class="amount">Sur devis</p><p class="per">au-delà de 10 000 / mois</p><p>Autres destinations, volumes importants : parlons-en.</p></article>
       </div>
       <div class="pricing-cta">
-        <a class="btn btn-primary btn-lg" href="https://app.izi-sendz.cloud/signup">S'inscrire gratuitement</a>
+        <a class="btn btn-primary btn-lg" href="https://app.izi-sendz.cloud/signup">Tester gratuitement</a>
+        <a class="btn btn-outline btn-lg" href="tarifs.html">Tous les tarifs</a>
       </div>
-      <p class="note">Plus de 10 000 unités ? <a href="#essai">Contactez-nous directement</a> pour un devis.</p>
-      <div class="calc" role="group" aria-label="Calculateur de pack">
-        <label for="calc-range"><strong>Combien de SMS par mois ?</strong> <output id="calc-vol" aria-live="polite">1 000 SMS</output></label>
-        <input type="range" id="calc-range" min="50" max="20000" step="50" value="1000" aria-describedby="calc-result">
-        <p class="calc-result" id="calc-result" aria-live="polite">Pack 1 000 unités — 15 000 XOF (15 XOF/SMS)</p>
-        <p><a class="btn btn-primary" id="calc-cta" href="#essai">Commander ce pack</a></p>
-      </div>
-      <p class="note muted">1 SMS de 160 caractères = 1 unité. Unités valables jusqu’épuisement. Le statut exact de chaque SMS est affiché dans votre tableau de bord — voir la FAQ.</p>
+      <p class="note muted">1 crédit = 1 unité. Le statut exact de chaque message est affiché dans votre espace client — voir la FAQ.</p>
     </div>
   </section>
 
   <section id="devs" class="section reveal">
     <div class="container">
       <h2>Une API que vos devs vont aimer</h2>
-      <p class="section-lead">Envoi unitaire et campagnes via API REST. Clé via en-tête API, JWT pour le tableau de bord. Webhooks d'accusés : livré, acheminé, impossible.</p>
+      <p class="section-lead">Un seul contrat d'envoi : service, canal, pays. Envoi unitaire et campagnes via API REST. Clé via en-tête API. Webhooks d'accusés : livré, lu, impossible.</p>
       <div class="tabs" role="tablist" aria-label="Exemples de code">
         <button class="tab is-active" role="tab" aria-selected="true" data-code="curl">cURL</button>
         <button class="tab" role="tab" aria-selected="false" data-code="js">JavaScript</button>
@@ -237,11 +256,11 @@
           <pre data-codeblock="curl"><code>curl -X POST https://api.izi-sendz.cloud/api/v1/tenant/messages/send \
   -H "X-Api-Key: VOTRE_CLE" \
   -H "Content-Type: application/json" \
-  -d '{"address":"tel:+2250700000001","content":"Votre code : 4821","senderName":"IZISMS"}'</code></pre>
+  -d '{"service":"sms","channel":"sms","country":"CI","address":"tel:+2250700000001","content":"Rappel : RDV demain à 10h. Répondez OUI pour confirmer.","senderName":"MABOUTIQUE"}'</code></pre>
           <pre data-codeblock="js" hidden><code>const res = await fetch("https://api.izi-sendz.cloud/api/v1/tenant/messages/send", {
   method: "POST",
   headers: { "X-Api-Key": "VOTRE_CLE", "Content-Type": "application/json" },
-  body: JSON.stringify({ address: "tel:+2250700000001", content: "Votre code : 4821", senderName: "IZISMS" })
+  body: JSON.stringify({ service: "sms", channel: "sms", country: "CI", address: "tel:+2250700000001", content: "Rappel : RDV demain à 10h. Répondez OUI pour confirmer.", senderName: "MABOUTIQUE" })
 });
 const data = await res.json();
 console.log(data.resourceId);</code></pre>
@@ -250,14 +269,14 @@ console.log(data.resourceId);</code></pre>
 res = requests.post(
     "https://api.izi-sendz.cloud/api/v1/tenant/messages/send",
     headers={"X-Api-Key": "VOTRE_CLE"},
-    json={"address": "tel:+2250700000001", "content": "Votre code : 4821", "senderName": "IZISMS"},
+    json={"service": "sms", "channel": "sms", "country": "CI", "address": "tel:+2250700000001", "content": "Rappel : RDV demain à 10h. Répondez OUI pour confirmer.", "senderName": "MABOUTIQUE"},
 )
 print(res.json())</code></pre>
           <pre data-codeblock="php" hidden><code>$ch = curl_init("https://api.izi-sendz.cloud/api/v1/tenant/messages/send");
 curl_setopt_array($ch, [
   CURLOPT_POST =&gt; true,
   CURLOPT_HTTPHEADER =&gt; ["X-Api-Key: VOTRE_CLE", "Content-Type: application/json"],
-  CURLOPT_POSTFIELDS =&gt; json_encode(["address" =&gt; "tel:+2250700000001", "content" =&gt; "Votre code : 4821", "senderName" =&gt; "IZISMS"]),
+  CURLOPT_POSTFIELDS =&gt; json_encode(["service" =&gt; "sms", "channel" =&gt; "sms", "country" =&gt; "CI", "address" =&gt; "tel:+2250700000001", "content" =&gt; "Rappel : RDV demain à 10h. Répondez OUI pour confirmer.", "senderName" =&gt; "MABOUTIQUE"]),
   CURLOPT_RETURNTRANSFER =&gt; true,
 ]);
 echo curl_exec($ch);</code></pre>
@@ -265,13 +284,13 @@ echo curl_exec($ch);</code></pre>
 http.DefaultRequestHeaders.Add("X-Api-Key", "VOTRE_CLE");
 var res = await http.PostAsJsonAsync(
     "https://api.izi-sendz.cloud/api/v1/tenant/messages/send",
-    new { address = "tel:+2250700000001", content = "Votre code : 4821", senderName = "IZISMS" });
+    new { service = "sms", channel = "sms", country = "CI", address = "tel:+2250700000001", content = "Rappel : RDV demain à 10h. Répondez OUI pour confirmer.", senderName = "MABOUTIQUE" });
 Console.WriteLine(await res.Content.ReadAsStringAsync());</code></pre>
         </div>
         <div class="cta-col">
           <p><span class="badge ok">Bac à sable inclus</span></p>
-          <a class="btn btn-primary" href="/signup">Obtenir une clé test</a>
-          <a class="btn btn-outline" href="#faq">Accéder à la doc</a>
+          <a class="btn btn-primary" href="https://app.izi-sendz.cloud/signup">Obtenir une clé test</a>
+          <a class="btn btn-outline" href="developpeurs.html">Voir le contrat d'envoi</a>
           <p class="muted">Bac à sable inclus pour tester sans créditer de vraies unités.</p>
         </div>
       </div>
@@ -287,7 +306,8 @@ Console.WriteLine(await res.Content.ReadAsStringAsync());</code></pre>
         <details><summary>Mon nom d'expéditeur ?</summary><p>11 caractères max, lettres, chiffres et espaces, validé avant usage (24-72 h). Sans validation, envoi impossible.</p></details>
         <details><summary>Et si un numéro est invalide ?</summary><p>Rejeté avant débit avec le code exact. Pas de facturation aveugle.</p></details>
         <details><summary>Mes contacts sont-ils en sécurité ?</summary><p>Données isolées par client, mots de passe et clés hachés, clé API à vue unique, journaux horodatés.</p></details>
-        <details><summary>Puis-je tester ?</summary><p>Oui : créez un compte, achetez un pack dès 2 000 F, et utilisez le bac à sable et la clé test.</p></details>
+        <details><summary>Puis-je tester ?</summary><p>Oui : créez un compte gratuitement, achetez du crédit sans abonnement et utilisez le bac à sable et la clé test.</p></details>
+        <details><summary>Combien coûtent les envois ?</summary><p>SMS : 25 FCFA l'unité. WhatsApp : 3 FCFA le message. 1 crédit = 1 unité, valable jusqu'épuisement. Gros volumes et autres destinations : sur devis.</p></details>
         <details><summary>Quels pays après la Côte d'Ivoire ?</summary><p>izi sendz couvre l'Afrique pays par pays. Indiquez-nous vos destinations : elles guident nos prochaines ouvertures.</p></details>
       </div>
     </div>
@@ -295,28 +315,13 @@ Console.WriteLine(await res.Content.ReadAsStringAsync());</code></pre>
 
   <section id="essai" class="section cta-final reveal">
     <div class="container">
-      <h2>Créez votre compte, envoyez vos premiers SMS aujourd'hui.</h2>
-      <p class="section-lead">Nom, entreprise, téléphone, volume mensuel estimé, message. Réponse sous 24 h ouvrées.</p>
-      <form class="form" id="contact-form" novalidate>
-        <div class="form-grid">
-          <label>Nom<input type="text" name="nom" required autocomplete="name"></label>
-          <label>Entreprise<input type="text" name="entreprise" required autocomplete="organization"></label>
-          <label>Téléphone<input type="tel" name="telephone" required autocomplete="tel" placeholder="+225…"></label>
-          <label>Volume mensuel estimé
-            <select name="volume">
-              <option value="">— Choisir —</option>
-              <option value="lt500">Moins de 500 SMS/mois</option>
-              <option value="500-2000">500 à 2 000 SMS/mois</option>
-              <option value="2000-10000">2 000 à 10 000 SMS/mois</option>
-              <option value="gt10000">Plus de 10 000 SMS/mois</option>
-            </select>
-          </label>
-        </div>
-        <label>Message<textarea name="message" rows="4" placeholder="Où envoyez-vous ? Quel usage : promo, OTP, notifications ?"></textarea></label>
-        <label class="optin"><input type="checkbox" required> J'accepte d'être recontacté au sujet de ma demande.</label>
-        <p class="form-status" id="contact-status" role="status" hidden></p>
-        <button class="btn btn-primary btn-lg" type="submit">Essayer maintenant</button>
-      </form>
+      <h2>Prêt à envoyer vos premiers messages ?</h2>
+      <p class="section-lead">Un seul contrat, un seul crédit : SMS + WhatsApp. Créez votre compte ou discutez avec nous.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary btn-lg" href="https://app.izi-sendz.cloud/signup">Tester gratuitement</a>
+        <a class="btn btn-outline btn-lg" href="tarifs.html">Voir les tarifs</a>
+        <a class="btn btn-outline btn-lg" href="https://wa.me/2250708616289">Discuter sur WhatsApp</a>
+      </div>
     </div>
   </section>
 
@@ -325,14 +330,15 @@ Console.WriteLine(await res.Content.ReadAsStringAsync());</code></pre>
 <footer class="footer">
   <div class="container footer-grid">
     <div>
-      <p><strong>izi sendz</strong> — Campagnes, OTP et notifications par SMS.</p>
+      <p><strong>izi sendz</strong> — Campagnes SMS et notifications WhatsApp.</p>
       <p class="muted">Abidjan, Côte d’Ivoire — <a href="mailto:contact@izi-sendz.cloud">contact@izi-sendz.cloud</a></p>
       <p class="muted">© 2026 izi sendz. Unités valables jusqu’épuisement.</p>
     </div>
     <nav aria-label="Pied de page">
-      <a href="#produit">Produit</a>
-      <a href="#tarifs">Tarifs</a>
-      <a href="#devs">Doc API</a>
+      <a href="fonctionnalites.html">Fonctionnalités</a>
+      <a href="tarifs.html">Tarifs</a>
+      <a href="developpeurs.html">Développeurs</a>
+      <a href="#faq">FAQ</a>
       <a href="#essai">Contact</a>
     </nav>
     <nav aria-label="Légal">
@@ -344,8 +350,8 @@ Console.WriteLine(await res.Content.ReadAsStringAsync());</code></pre>
 
 <button id="to-top" aria-label="Retour en haut">↑</button>
 <div class="mobile-cta" role="complementary" aria-label="Essai rapide">
-  <span>Packs dès 2 000 F · Expéditeur inclus</span>
-  <a class="btn btn-primary" href="#essai">Essayer</a>
+  <span>SMS 25 F · WhatsApp 3 F</span>
+  <a class="btn btn-primary" href="https://app.izi-sendz.cloud/signup">Tester</a>
 </div>
 
 <script src="app.js" defer></script>

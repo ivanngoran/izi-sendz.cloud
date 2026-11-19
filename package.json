@@ -5,7 +5,7 @@
   "description": "Site vitrine izi sendz (statique, sans build)",
   "scripts": {
     "serve": "npx serve .",
-    "check": "node -e \"for (const f of ['index.html','styles.css','app.js','confidentialite.html','mentions-legales.html']) { require('fs').accessSync(f); } console.log('OK: fichiers requis presents')\""
+    "check": "node -e \"for (const f of ['index.html','fonctionnalites.html','tarifs.html','developpeurs.html','styles.css','app.js','confidentialite.html','mentions-legales.html']) { require('fs').accessSync(f); } console.log('OK: fichiers requis presents')\""
   },
   "license": "UNLICENSED"
 }
