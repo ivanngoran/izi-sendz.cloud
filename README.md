@@ -33,7 +33,7 @@ Ouvrir http://localhost:3000 (ou :8000).
 - Contact `contact@izi-sendz.cloud`
 - Page `mentions-legales.html` : hébergeur à compléter
 - Contact WhatsApp : `https://wa.me/2250708616289` (numéro de TEST — basculer sur le numéro prod au lancement : chercher/remplacer dans les 4 pages)
-- Offre affichée : SMS 25 FCFA/unité, WhatsApp 3 FCFA/message, 1 crédit = 1 unité, gros volumes sur devis
+- Offre affichée : SMS à paliers en CI (100 u → 2 000 F · 1 000 u → 15 000 F · 5 000 u → 60 000 F · 10 000 u → 100 000 F) / 25 FCFA ailleurs en Afrique, WhatsApp 3 FCFA/message, 1 crédit = 1 unité, gros volumes sur devis
 
 ## Déploiement
 

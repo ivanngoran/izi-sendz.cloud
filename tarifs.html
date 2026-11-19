@@ -51,12 +51,12 @@
 
   <section class="section reveal">
     <div class="container">
-      <table class="tariff" aria-label="Grille tarifaire">
+      <table class="tariff" aria-label="Grille tarifaire par pays">
         <thead>
           <tr><th scope="col">Service</th><th scope="col">Destination</th><th scope="col">Tarif</th></tr>
         </thead>
         <tbody>
-          <tr><td>SMS</td><td>Côte d'Ivoire</td><td class="amount-cell">25 FCFA / unité</td></tr>
+          <tr><td>SMS</td><td>Côte d'Ivoire</td><td class="amount-cell">Paliers : 100 u → 2 000 F · 1 000 u → 15 000 F · 5 000 u → 60 000 F · 10 000 u → 100 000 F</td></tr>
           <tr><td>SMS</td><td>Autres pays d'Afrique (Ouest et Centre)</td><td class="amount-cell">25 FCFA / unité</td></tr>
           <tr><td>WhatsApp</td><td>Numéro officiel</td><td class="amount-cell">3 FCFA / message</td></tr>
           <tr><td>Tous canaux</td><td>Gros volumes (au-delà de 10 000 / mois), autres destinations</td><td class="amount-cell">Sur devis</td></tr>
@@ -69,17 +69,18 @@
   <section class="section alt reveal">
     <div class="container">
       <h2>Estimez votre budget</h2>
-      <p class="section-lead">Choisissez un canal et un volume mensuel : le total s'affiche aussitôt.</p>
-      <div class="calc" role="group" aria-label="Simulateur de budget">
-        <label> Canal
-          <select id="sim-canal">
-            <option value="sms">SMS — 25 FCFA / unité</option>
-            <option value="whatsapp">WhatsApp — 3 FCFA / message</option>
+      <p class="section-lead">Choisissez un pays et un volume : le coût s'affiche pour chaque service, séparément.</p>
+      <div class="calc" role="group" aria-label="Simulateur de budget par pays">
+        <label>Pays
+          <select id="sim-pays">
+            <option value="ci">Côte d'Ivoire</option>
+            <option value="afrique">Autre pays d'Afrique (Ouest et Centre)</option>
           </select>
         </label>
-        <label for="sim-range"><strong>Combien de messages par mois ?</strong> <output id="sim-vol" aria-live="polite">1 000 SMS</output></label>
+        <label for="sim-range"><strong>Combien de messages par mois ?</strong> <output id="sim-vol" aria-live="polite">1 000 messages</output></label>
         <input type="range" id="sim-range" min="100" max="20000" step="100" value="1000" aria-describedby="sim-result">
-        <p class="calc-result" id="sim-result" aria-live="polite">Estimation : 25 000 FCFA (25 FCFA/unité)</p>
+        <p class="calc-result" id="sim-result" aria-live="polite">SMS — Côte d’Ivoire : pack 1 000 unités, 15 000 FCFA (15 FCFA/unité)</p>
+        <p class="calc-result" id="sim-result-wa" aria-live="polite">WhatsApp : 3 000 FCFA (3 FCFA/message)</p>
         <p><a class="btn btn-primary" id="sim-cta" href="https://app.izi-sendz.cloud/signup">Tester gratuitement</a></p>
       </div>
     </div>

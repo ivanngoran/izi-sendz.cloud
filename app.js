@@ -163,33 +163,51 @@
     });
   }
 
-  /* 2. Calculateur de credit (page Tarifs : canal + volume -> estimation) */
-  var simCanal = document.getElementById("sim-canal");
+  /* 2. Simulateur tarifs par pays (page Tarifs : pays + volume -> cout par service) */
+  var TIERS_CI = [
+    { units: 100, price: 2000 },
+    { units: 1000, price: 15000 },
+    { units: 5000, price: 60000 },
+    { units: 10000, price: 100000 }
+  ];
+  var simPays = document.getElementById("sim-pays");
   var simRange = document.getElementById("sim-range");
   var simVol = document.getElementById("sim-vol");
   var simResult = document.getElementById("sim-result");
+  var simResultWa = document.getElementById("sim-result-wa");
   var simCta = document.getElementById("sim-cta");
-  var RATES = { sms: 25, whatsapp: 3 };
   function fmt(n) { return n.toLocaleString("fr-FR").replace(/,/g, " "); }
   function renderSimTarif() {
-    if (!simRange || !simCanal) return;
+    if (!simRange) return;
     var vol = parseInt(simRange.value, 10);
-    var rate = RATES[simCanal.value] || 25;
-    var unit = simCanal.value === "whatsapp" ? "messages WhatsApp" : "SMS";
-    if (simVol) simVol.textContent = fmt(vol) + " " + unit;
-    simRange.setAttribute("aria-valuetext", fmt(vol) + " " + unit + " par mois");
-    var total = vol * rate;
+    var pays = simPays ? simPays.value : "ci";
+    if (simVol) simVol.textContent = fmt(vol) + " messages";
+    simRange.setAttribute("aria-valuetext", fmt(vol) + " messages par mois");
+    var smsText;
+    if (pays === "ci") {
+      var pick = null;
+      for (var j = 0; j < TIERS_CI.length; j++) {
+        if (TIERS_CI[j].units >= vol) { pick = TIERS_CI[j]; break; }
+      }
+      if (pick) {
+        smsText = "SMS — Côte d’Ivoire : pack " + fmt(pick.units) + " unités, " + fmt(pick.price) + " FCFA (" + fmt(pick.price / pick.units) + " FCFA/unité)";
+      } else {
+        smsText = "SMS — Côte d’Ivoire : au-delà de 10 000 unités, devis volume.";
+      }
+    } else {
+      smsText = "SMS — Afrique : " + fmt(vol * 25) + " FCFA (25 FCFA/unité)";
+    }
+    if (simResult) simResult.textContent = smsText;
+    if (simResultWa) simResultWa.textContent = "WhatsApp : " + fmt(vol * 3) + " FCFA (3 FCFA/message)";
     if (vol > 10000) {
-      if (simResult) simResult.textContent = "Estimation : " + fmt(total) + " FCFA — au-delà de 10 000, demandez un devis volume.";
       if (simCta) { simCta.textContent = "Discuter sur WhatsApp"; simCta.setAttribute("href", "https://wa.me/2250708616289"); }
     } else {
-      if (simResult) simResult.textContent = "Estimation : " + fmt(total) + " FCFA (" + rate + " FCFA/" + (simCanal.value === "whatsapp" ? "message" : "unité") + ")";
       if (simCta) { simCta.textContent = "Tester gratuitement"; simCta.setAttribute("href", "https://app.izi-sendz.cloud/signup"); }
     }
   }
-  if (simRange && simCanal) {
+  if (simRange) {
     simRange.addEventListener("input", renderSimTarif);
-    simCanal.addEventListener("change", renderSimTarif);
+    if (simPays) simPays.addEventListener("change", renderSimTarif);
     renderSimTarif();
   }
 
