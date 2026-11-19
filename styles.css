@@ -174,7 +174,9 @@ pre code { background: none; padding: 0; color: inherit; }
 
 .calc { background: #fff; border: 1px solid var(--border); border-radius: var(--radius-md); padding: 18px; margin-top: 20px; display: grid; gap: 10px; }
 .calc label { display: grid; gap: 6px; font-weight: 600; font-size: 14px; }
-.calc select { border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 10px 12px; font: inherit; font-weight: 400; background: #fff; max-width: 420px; }
+.calc select { appearance: none; -webkit-appearance: none; border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 12px 40px 12px 14px; font: inherit; font-weight: 500; font-size: 15px; background: #fff url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="8"><path d="M1 1l5 5 5-5" stroke="%2364748B" stroke-width="2" fill="none" stroke-linecap="round"/></svg>') no-repeat right 14px center; color: var(--text); max-width: 460px; cursor: pointer; }
+.calc select:focus { outline: 2px solid var(--izi-blue-600); outline-offset: 2px; }
+.calc select:hover { border-color: var(--izi-blue-600); }
 .calc input[type="range"] { width: 100%; accent-color: var(--izi-blue-600); }
 .calc-result { font-weight: 700; font-size: 16px; margin: 0; color: var(--izi-blue-600); }
 

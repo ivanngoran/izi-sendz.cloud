@@ -180,11 +180,13 @@
   function renderSimTarif() {
     if (!simRange) return;
     var vol = parseInt(simRange.value, 10);
-    var pays = simPays ? simPays.value : "ci";
+    var pays = simPays ? simPays.value : "CI";
+    var paysNom = "Côte d’Ivoire";
+    if (simPays && simPays.selectedIndex >= 0) paysNom = simPays.options[simPays.selectedIndex].text;
     if (simVol) simVol.textContent = fmt(vol) + " messages";
     simRange.setAttribute("aria-valuetext", fmt(vol) + " messages par mois");
     var smsText;
-    if (pays === "ci") {
+    if (pays === "CI") {
       var pick = null;
       for (var j = 0; j < TIERS_CI.length; j++) {
         if (TIERS_CI[j].units >= vol) { pick = TIERS_CI[j]; break; }
@@ -195,7 +197,7 @@
         smsText = "SMS — Côte d’Ivoire : au-delà de 10 000 unités, devis volume.";
       }
     } else {
-      smsText = "SMS — Afrique : " + fmt(vol * 25) + " FCFA (25 FCFA/unité)";
+      smsText = "SMS — " + paysNom + " : " + fmt(vol * 25) + " FCFA (25 FCFA/unité)";
     }
     if (simResult) simResult.textContent = smsText;
     if (simResultWa) simResultWa.textContent = "WhatsApp : " + fmt(vol * 3) + " FCFA (3 FCFA/message)";
