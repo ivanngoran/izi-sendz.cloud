@@ -1,41 +1,35 @@
-# izi sendz — Site vitrine
+# izi sendz — Site vitrine (v2)
 
-Site vitrine statique (sans build) : `index.html` + `styles.css` + `app.js`.
-Extrait du monorepo `izi_sms/website/` le 2026-11-14 — désormais projet indépendant.
-
-## Lancer en local
+Site 100 % statique, sans build ni dépendance : HTML + `styles.css` + `app.js`.
+Servir la racine telle quelle (GitHub Pages via `CNAME`, Netlify, Nginx…).
 
 ```bash
 npx serve .        # ou : python -m http.server 8000
 ```
 
-Ouvrir http://localhost:3000 (ou :8000).
+## Pages
 
-## Structure
-
-| Fichier | Rôle |
+| Fichier | Contenu |
 |---|---|
-| `index.html` | Accueil : hero multi-canal, 2 canaux, tarifs, FAQ, CTA final |
-| `fonctionnalites.html` | Les 11 fonctions (bénéfice + exemple + CTA) |
-| `tarifs.html` | Grille par pays + simulateur canal × volume |
-| `developpeurs.html` | Contrat d'envoi unique + exemples + OTP via API |
-| `styles.css` | Styles (clair uniquement) |
-| `app.js` | Menu mobile, hero, simulateur SMS, simulateur tarifs, FAQ, onglets |
-| `confidentialite.html`, `mentions-legales.html` | Pages légales |
-| `assets/logo.png` | Logo |
-| `CONTENU.md` | Copywriting source (à valider avant modif du HTML) |
+| `index.html` | Hero animé (conversations SMS/WhatsApp), canaux, Studio (simulateur de message), cas d'usage par métier, parcours d'un message, fonctionnalités, couverture UEMOA/CEMAC, tarifs, API, sécurité, FAQ, CTA |
+| `fonctionnalites.html` | Les 11 fonctionnalités (bénéfice + exemple + CTA) |
+| `tarifs.html` | Prix du pays détecté (monnaie locale + EUR + USD), volume, grille des 54 pays |
+| `data/pricing.json` | Prix fixes par pays (F CFA) + taux de change, lus par le site |
+| `tools/update-rates.mjs` | `node tools/update-rates.mjs` : rafraîchit les taux du JSON |
+| `developpeurs.html` | Contrat d'envoi, exemples cURL/JS/Python/PHP/C#, OTP avec repli, statuts |
+| `confidentialite.html`, `mentions-legales.html`, `404.html` | Pages annexes |
+| `assets/logo.png`, `assets/logo-mark.png` | Logo d'origine + version recadrée sur fond transparent |
 
-## Config à adapter au déploiement
+Thème clair et sombre automatique (préférence système). Animations désactivées si « réduire les animations » est activé.
 
-- Domaine canonique dans `index.html` : `https://izi-sendz.cloud/`
-- Lien `Se connecter` → `https://app.izi-sendz.cloud/login`
-- Extraits API → `https://api.izi-sendz.cloud/...` (public ; backend derrière `api-backend.izi-sendz.cloud`)
-- Contact `contact@izi-sendz.cloud`
-- Page `mentions-legales.html` : hébergeur à compléter
-- Contact WhatsApp : `https://wa.me/2250708616289` (numéro de TEST — basculer sur le numéro prod au lancement : chercher/remplacer dans les 4 pages)
-- Offre affichée : SMS à paliers en CI (100 u → 2 000 F · 1 000 u → 15 000 F · 5 000 u → 60 000 F · 10 000 u → 100 000 F) / 25 FCFA ailleurs en Afrique, WhatsApp 3 FCFA/message, 1 crédit = 1 unité, gros volumes sur devis
+## Tarifs
 
-## Déploiement
+Prix fixes facturés en F CFA : SMS 15 F en Côte d'Ivoire, 25 F ailleurs en Afrique ; WhatsApp 5 F partout.
+Pays détecté via le fuseau horaire du navigateur (puis la langue), sinon Côte d'Ivoire. Le choix du visiteur est mémorisé.
+Le site doit être servi en HTTP (pas en `file://`) pour que `data/pricing.json` soit lu.
 
-Site 100 % statique : servir la racine telle quelle (Vercel, Netlify, Nginx, S3+CDN).
-Aucune variable d'environnement, aucun build.
+## À vérifier avant mise en ligne
+
+- Numéro WhatsApp `2250708616289` = numéro de TEST : chercher/remplacer dans toutes les pages et `app.js`.
+- `mentions-legales.html` : hébergeur à compléter.
+- Réponse API affichée : `{ "resourceId": "…" }` uniquement (aucun autre champ inventé).

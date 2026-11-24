@@ -1,0 +1,489 @@
+{
+  "_doc": "Prix fixes en F CFA (XOF) par message. Les montants en monnaie locale, EUR et USD sont calculés : prix / ratesPerEUR.XOF * ratesPerEUR[devise]. Mettre à jour les taux avec : node tools/update-rates.mjs",
+  "billingCurrency": "XOF",
+  "defaultCountry": "CI",
+  "rates": {
+    "source": "open.er-api.com",
+    "updatedAt": "2026-11-24",
+    "ratesPerEUR": {
+      "EUR": 1,
+      "USD": 1.092139,
+      "XOF": 655.957,
+      "XAF": 655.957,
+      "NGN": 1480.938168,
+      "GHS": 12.950089,
+      "GNF": 9687.663086,
+      "SLE": 25.041644,
+      "LRD": 183.733144,
+      "GMD": 81.883266,
+      "CVE": 110.265,
+      "MRU": 44.706169,
+      "MAD": 10.951253,
+      "DZD": 150.526353,
+      "TND": 3.35109,
+      "LYD": 7.103024,
+      "EGP": 59.385592,
+      "SDG": 490.797395,
+      "SSP": 6281.265749,
+      "ETB": 179.472437,
+      "ERN": 16.381701,
+      "DJF": 194.091481,
+      "SOS": 628.038889,
+      "KES": 142.639701,
+      "UGX": 4480.861513,
+      "TZS": 2897.027761,
+      "RWF": 1623.959594,
+      "BIF": 3303.380266,
+      "CDF": 2549.932331,
+      "AOA": 1034.6163,
+      "ZMW": 22.561173,
+      "MWK": 1909.276519,
+      "MZN": 69.953909,
+      "ZWG": 29.1703,
+      "BWP": 16.034485,
+      "NAD": 19.015817,
+      "ZAR": 19.016413,
+      "LSL": 19.015817,
+      "SZL": 19.015817,
+      "MGA": 5051.878691,
+      "MUR": 51.340537,
+      "SCR": 15.728707,
+      "KMF": 491.96775,
+      "STN": 24.5
+    }
+  },
+  "countries": [
+    {
+      "code": "ZA",
+      "name": "Afrique du Sud",
+      "currency": "ZAR",
+      "sms": 25,
+      "whatsapp": 5,
+      "timezones": ["Africa/Johannesburg"]
+    },
+    {
+      "code": "DZ",
+      "name": "Algérie",
+      "currency": "DZD",
+      "sms": 25,
+      "whatsapp": 5,
+      "timezones": ["Africa/Algiers"]
+    },
+    {
+      "code": "AO",
+      "name": "Angola",
+      "currency": "AOA",
+      "sms": 25,
+      "whatsapp": 5,
+      "timezones": ["Africa/Luanda"]
+    },
+    {
+      "code": "BW",
+      "name": "Botswana",
+      "currency": "BWP",
+      "sms": 25,
+      "whatsapp": 5,
+      "timezones": ["Africa/Gaborone"]
+    },
+    {
+      "code": "BF",
+      "name": "Burkina Faso",
+      "currency": "XOF",
+      "sms": 25,
+      "whatsapp": 5,
+      "timezones": ["Africa/Ouagadougou"]
+    },
+    {
+      "code": "BI",
+      "name": "Burundi",
+      "currency": "BIF",
+      "sms": 25,
+      "whatsapp": 5,
+      "timezones": ["Africa/Bujumbura"]
+    },
+    {
+      "code": "BJ",
+      "name": "Bénin",
+      "currency": "XOF",
+      "sms": 25,
+      "whatsapp": 5,
+      "timezones": ["Africa/Porto-Novo"]
+    },
+    {
+      "code": "CM",
+      "name": "Cameroun",
+      "currency": "XAF",
+      "sms": 25,
+      "whatsapp": 5,
+      "timezones": ["Africa/Douala"]
+    },
+    {
+      "code": "CV",
+      "name": "Cap-Vert",
+      "currency": "CVE",
+      "sms": 25,
+      "whatsapp": 5,
+      "timezones": ["Atlantic/Cape_Verde"]
+    },
+    {
+      "code": "CF",
+      "name": "Centrafrique",
+      "currency": "XAF",
+      "sms": 25,
+      "whatsapp": 5,
+      "timezones": ["Africa/Bangui"]
+    },
+    {
+      "code": "KM",
+      "name": "Comores",
+      "currency": "KMF",
+      "sms": 25,
+      "whatsapp": 5,
+      "timezones": ["Indian/Comoro"]
+    },
+    {
+      "code": "CG",
+      "name": "Congo",
+      "currency": "XAF",
+      "sms": 25,
+      "whatsapp": 5,
+      "timezones": ["Africa/Brazzaville"]
+    },
+    {
+      "code": "CI",
+      "name": "Côte d'Ivoire",
+      "currency": "XOF",
+      "sms": 15,
+      "whatsapp": 5,
+      "timezones": ["Africa/Abidjan"]
+    },
+    {
+      "code": "DJ",
+      "name": "Djibouti",
+      "currency": "DJF",
+      "sms": 25,
+      "whatsapp": 5,
+      "timezones": ["Africa/Djibouti"]
+    },
+    {
+      "code": "EG",
+      "name": "Égypte",
+      "currency": "EGP",
+      "sms": 25,
+      "whatsapp": 5,
+      "timezones": ["Africa/Cairo"]
+    },
+    {
+      "code": "ER",
+      "name": "Érythrée",
+      "currency": "ERN",
+      "sms": 25,
+      "whatsapp": 5,
+      "timezones": ["Africa/Asmara"]
+    },
+    {
+      "code": "SZ",
+      "name": "Eswatini",
+      "currency": "SZL",
+      "sms": 25,
+      "whatsapp": 5,
+      "timezones": ["Africa/Mbabane"]
+    },
+    {
+      "code": "ET",
+      "name": "Éthiopie",
+      "currency": "ETB",
+      "sms": 25,
+      "whatsapp": 5,
+      "timezones": ["Africa/Addis_Ababa"]
+    },
+    {
+      "code": "GA",
+      "name": "Gabon",
+      "currency": "XAF",
+      "sms": 25,
+      "whatsapp": 5,
+      "timezones": ["Africa/Libreville"]
+    },
+    {
+      "code": "GM",
+      "name": "Gambie",
+      "currency": "GMD",
+      "sms": 25,
+      "whatsapp": 5,
+      "timezones": ["Africa/Banjul"]
+    },
+    {
+      "code": "GH",
+      "name": "Ghana",
+      "currency": "GHS",
+      "sms": 25,
+      "whatsapp": 5,
+      "timezones": ["Africa/Accra"]
+    },
+    {
+      "code": "GN",
+      "name": "Guinée",
+      "currency": "GNF",
+      "sms": 25,
+      "whatsapp": 5,
+      "timezones": ["Africa/Conakry"]
+    },
+    {
+      "code": "GQ",
+      "name": "Guinée équatoriale",
+      "currency": "XAF",
+      "sms": 25,
+      "whatsapp": 5,
+      "timezones": ["Africa/Malabo"]
+    },
+    {
+      "code": "GW",
+      "name": "Guinée-Bissau",
+      "currency": "XOF",
+      "sms": 25,
+      "whatsapp": 5,
+      "timezones": ["Africa/Bissau"]
+    },
+    {
+      "code": "KE",
+      "name": "Kenya",
+      "currency": "KES",
+      "sms": 25,
+      "whatsapp": 5,
+      "timezones": ["Africa/Nairobi"]
+    },
+    {
+      "code": "LS",
+      "name": "Lesotho",
+      "currency": "LSL",
+      "sms": 25,
+      "whatsapp": 5,
+      "timezones": ["Africa/Maseru"]
+    },
+    {
+      "code": "LR",
+      "name": "Liberia",
+      "currency": "LRD",
+      "sms": 25,
+      "whatsapp": 5,
+      "timezones": ["Africa/Monrovia"]
+    },
+    {
+      "code": "LY",
+      "name": "Libye",
+      "currency": "LYD",
+      "sms": 25,
+      "whatsapp": 5,
+      "timezones": ["Africa/Tripoli"]
+    },
+    {
+      "code": "MG",
+      "name": "Madagascar",
+      "currency": "MGA",
+      "sms": 25,
+      "whatsapp": 5,
+      "timezones": ["Indian/Antananarivo"]
+    },
+    {
+      "code": "MW",
+      "name": "Malawi",
+      "currency": "MWK",
+      "sms": 25,
+      "whatsapp": 5,
+      "timezones": ["Africa/Blantyre"]
+    },
+    {
+      "code": "ML",
+      "name": "Mali",
+      "currency": "XOF",
+      "sms": 25,
+      "whatsapp": 5,
+      "timezones": ["Africa/Bamako"]
+    },
+    {
+      "code": "MA",
+      "name": "Maroc",
+      "currency": "MAD",
+      "sms": 25,
+      "whatsapp": 5,
+      "timezones": ["Africa/Casablanca", "Africa/El_Aaiun"]
+    },
+    {
+      "code": "MU",
+      "name": "Maurice",
+      "currency": "MUR",
+      "sms": 25,
+      "whatsapp": 5,
+      "timezones": ["Indian/Mauritius"]
+    },
+    {
+      "code": "MR",
+      "name": "Mauritanie",
+      "currency": "MRU",
+      "sms": 25,
+      "whatsapp": 5,
+      "timezones": ["Africa/Nouakchott"]
+    },
+    {
+      "code": "MZ",
+      "name": "Mozambique",
+      "currency": "MZN",
+      "sms": 25,
+      "whatsapp": 5,
+      "timezones": ["Africa/Maputo"]
+    },
+    {
+      "code": "NA",
+      "name": "Namibie",
+      "currency": "NAD",
+      "sms": 25,
+      "whatsapp": 5,
+      "timezones": ["Africa/Windhoek"]
+    },
+    {
+      "code": "NE",
+      "name": "Niger",
+      "currency": "XOF",
+      "sms": 25,
+      "whatsapp": 5,
+      "timezones": ["Africa/Niamey"]
+    },
+    {
+      "code": "NG",
+      "name": "Nigeria",
+      "currency": "NGN",
+      "sms": 25,
+      "whatsapp": 5,
+      "timezones": ["Africa/Lagos"]
+    },
+    {
+      "code": "UG",
+      "name": "Ouganda",
+      "currency": "UGX",
+      "sms": 25,
+      "whatsapp": 5,
+      "timezones": ["Africa/Kampala"]
+    },
+    {
+      "code": "CD",
+      "name": "RD Congo",
+      "currency": "CDF",
+      "sms": 25,
+      "whatsapp": 5,
+      "timezones": ["Africa/Kinshasa", "Africa/Lubumbashi"]
+    },
+    {
+      "code": "RW",
+      "name": "Rwanda",
+      "currency": "RWF",
+      "sms": 25,
+      "whatsapp": 5,
+      "timezones": ["Africa/Kigali"]
+    },
+    {
+      "code": "ST",
+      "name": "Sao Tomé-et-Principe",
+      "currency": "STN",
+      "sms": 25,
+      "whatsapp": 5,
+      "timezones": ["Africa/Sao_Tome"]
+    },
+    {
+      "code": "SC",
+      "name": "Seychelles",
+      "currency": "SCR",
+      "sms": 25,
+      "whatsapp": 5,
+      "timezones": ["Indian/Mahe"]
+    },
+    {
+      "code": "SL",
+      "name": "Sierra Leone",
+      "currency": "SLE",
+      "sms": 25,
+      "whatsapp": 5,
+      "timezones": ["Africa/Freetown"]
+    },
+    {
+      "code": "SO",
+      "name": "Somalie",
+      "currency": "SOS",
+      "sms": 25,
+      "whatsapp": 5,
+      "timezones": ["Africa/Mogadishu"]
+    },
+    {
+      "code": "SD",
+      "name": "Soudan",
+      "currency": "SDG",
+      "sms": 25,
+      "whatsapp": 5,
+      "timezones": ["Africa/Khartoum"]
+    },
+    {
+      "code": "SS",
+      "name": "Soudan du Sud",
+      "currency": "SSP",
+      "sms": 25,
+      "whatsapp": 5,
+      "timezones": ["Africa/Juba"]
+    },
+    {
+      "code": "SN",
+      "name": "Sénégal",
+      "currency": "XOF",
+      "sms": 25,
+      "whatsapp": 5,
+      "timezones": ["Africa/Dakar"]
+    },
+    {
+      "code": "TZ",
+      "name": "Tanzanie",
+      "currency": "TZS",
+      "sms": 25,
+      "whatsapp": 5,
+      "timezones": ["Africa/Dar_es_Salaam"]
+    },
+    {
+      "code": "TD",
+      "name": "Tchad",
+      "currency": "XAF",
+      "sms": 25,
+      "whatsapp": 5,
+      "timezones": ["Africa/Ndjamena"]
+    },
+    {
+      "code": "TG",
+      "name": "Togo",
+      "currency": "XOF",
+      "sms": 25,
+      "whatsapp": 5,
+      "timezones": ["Africa/Lome"]
+    },
+    {
+      "code": "TN",
+      "name": "Tunisie",
+      "currency": "TND",
+      "sms": 25,
+      "whatsapp": 5,
+      "timezones": ["Africa/Tunis"]
+    },
+    {
+      "code": "ZM",
+      "name": "Zambie",
+      "currency": "ZMW",
+      "sms": 25,
+      "whatsapp": 5,
+      "timezones": ["Africa/Lusaka"]
+    },
+    {
+      "code": "ZW",
+      "name": "Zimbabwe",
+      "currency": "ZWG",
+      "sms": 25,
+      "whatsapp": 5,
+      "timezones": ["Africa/Harare"]
+    }
+  ]
+}

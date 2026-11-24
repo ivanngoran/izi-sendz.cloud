@@ -2,125 +2,143 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tarifs par pays — izi-sendz</title>
-<meta name="description" content="Tarifs izi-sendz par pays (UEMOA + CEMAC). Simulateur : choisissez un pays et un volume, coût par service. Sans abonnement.">
-<meta property="og:title" content="Tarifs — izi-sendz">
-<meta property="og:description" content="Tarifs par pays, simulateur en ligne. 1 crédit = 1 unité, sans abonnement.">
-<meta property="og:type" content="website">
-<meta property="og:image" content="assets/logo.png">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Tarifs — izi sendz, SMS et WhatsApp à prix fixe</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="SMS à 15 F CFA en Côte d'Ivoire, 25 F CFA ailleurs en Afrique, WhatsApp à 5 F CFA partout. Prix par pays en monnaie locale, euro et dollar US.">
+<meta name="theme-color" content="#070B24">
 <link rel="canonical" href="https://izi-sendz.cloud/tarifs.html">
-<link rel="icon" type="image/png" href="assets/logo.png">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:site_name" content="izi sendz">
+<meta property="og:title" content="Tarifs — izi sendz, SMS et WhatsApp à prix fixe">
+<meta property="og:description" content="SMS à 15 F CFA en Côte d'Ivoire, 25 F CFA ailleurs en Afrique, WhatsApp à 5 F CFA partout. Prix par pays en monnaie locale, euro et dollar US.">
+<meta property="og:url" content="https://izi-sendz.cloud/tarifs.html">
+<meta property="og:image" content="https://izi-sendz.cloud/assets/logo.png">
+<meta name="twitter:card" content="summary">
+<link rel="icon" type="image/png" href="assets/logo-mark.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Sora:wght@600;700;800&display=swap">
 <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-
+<body class="hero-page">
 <a class="skip" href="#contenu">Aller au contenu</a>
-
-<header class="header">
-  <div class="container header-inner">
-    <a class="brand" href="index.html" aria-label="izi-sendz — accueil">
-      <img src="assets/logo.png" alt="izi sendz" width="40" height="30">
-      <span>izi sendz</span>
+<header class="header" id="header">
+  <div class="wrap header-inner">
+    <a class="brand" href="index.html" aria-label="izi sendz, accueil">
+      <img src="assets/logo-mark.png" alt="" width="44" height="30">
+      <span>izi <b>sendz</b></span>
     </a>
-    <button class="burger" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="site-nav">
-      <span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span>
-    </button>
-    <nav class="nav" id="site-nav" aria-label="Navigation principale">
-      <a href="fonctionnalites.html">Fonctionnalités</a>
-      <a href="tarifs.html" aria-current="page">Tarifs</a>
-      <a href="developpeurs.html">Développeurs</a>
-      <a href="index.html#faq">FAQ</a>
-    </nav>
+    <nav class="nav" aria-label="Navigation principale"><a href="fonctionnalites.html">Fonctionnalités</a><a href="index.html#cas-usage">Cas d'usage</a><a href="tarifs.html" aria-current="page">Tarifs</a><a href="developpeurs.html">Développeurs</a><a href="index.html#faq">FAQ</a></nav>
     <div class="header-cta">
       <a class="btn btn-ghost" href="https://app.izi-sendz.cloud/login">Se connecter</a>
       <a class="btn btn-primary" href="https://app.izi-sendz.cloud/signup">Tester gratuitement</a>
     </div>
+    <button class="burger" type="button" id="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="drawer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
   </div>
 </header>
-
-<main id="contenu">
-
-  <div class="container page-hero">
-    <h1>Des tarifs par pays, sans abonnement.</h1>
-    <p class="section-lead">Choisissez votre pays et votre volume : le coût s'affiche pour chaque service, séparément. 1 crédit = 1 unité, valable jusqu'épuisement. Paiement par mobile money et cartes. Le simulateur ci-dessous fait foi.</p>
+<div class="drawer" id="drawer">
+  <nav aria-label="Navigation mobile"><a href="fonctionnalites.html">Fonctionnalités</a><a href="index.html#cas-usage">Cas d'usage</a><a href="tarifs.html" aria-current="page">Tarifs</a><a href="developpeurs.html">Développeurs</a><a href="index.html#faq">FAQ</a><a href="https://app.izi-sendz.cloud/login">Se connecter</a></nav>
+  <div class="drawer-cta">
+    <a class="btn btn-primary btn-lg" href="https://app.izi-sendz.cloud/signup">Tester gratuitement</a>
+    <a class="btn btn-wa btn-lg" href="https://wa.me/2250708616289"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21l1.65-3.8a9 9 0 1 1 3.4 2.9L3 21"/><path d="M9 10a.5.5 0 0 0 1 0V9a.5.5 0 0 0-1 0v1a5 5 0 0 0 5 5h1a.5.5 0 0 0 0-1h-1a.5.5 0 0 0 0 1"/></svg> Discuter sur WhatsApp</a>
   </div>
-
-  <section class="section reveal">
-    <div class="container">
-      <h2>Estimez votre budget</h2>
-      <p class="section-lead">Choisissez un pays et un volume : le coût s'affiche pour chaque service, séparément.</p>
-      <div class="calc" role="group" aria-label="Simulateur de budget par pays">
-        <label>Pays
-          <select id="sim-pays">
-            <optgroup label="UEMOA">
-              <option value="CI">Côte d'Ivoire</option>
-              <option value="BJ">Bénin</option>
-              <option value="BF">Burkina Faso</option>
-              <option value="GW">Guinée-Bissau</option>
-              <option value="ML">Mali</option>
-              <option value="NE">Niger</option>
-              <option value="SN">Sénégal</option>
-              <option value="TG">Togo</option>
-            </optgroup>
-            <optgroup label="CEMAC">
-              <option value="CM">Cameroun</option>
-              <option value="CF">République centrafricaine</option>
-              <option value="CG">République du Congo</option>
-              <option value="GA">Gabon</option>
-              <option value="GQ">Guinée équatoriale</option>
-              <option value="TD">Tchad</option>
-            </optgroup>
-          </select>
-        </label>
-        <label for="sim-range"><strong>Combien de messages par mois ?</strong> <output id="sim-vol" aria-live="polite">1 000 messages</output></label>
-        <input type="range" id="sim-range" min="100" max="20000" step="100" value="1000" aria-describedby="sim-result">
-        <p class="calc-result" id="sim-result" aria-live="polite">SMS — Côte d’Ivoire : pack 1 000 unités, 15 000 FCFA (15 FCFA/unité)</p>
-        <p class="calc-result" id="sim-result-wa" aria-live="polite">WhatsApp : 3 000 FCFA (3 FCFA/message)</p>
-        <p><a class="btn btn-primary" id="sim-cta" href="https://app.izi-sendz.cloud/signup">Tester gratuitement</a></p>
-      </div>
-    </div>
-  </section>
-
-  <section class="section cta-final reveal">
-    <div class="container">
-      <h2>Prêt à envoyer vos premiers messages ?</h2>
-      <p class="section-lead">Un seul contrat, un seul crédit : SMS + WhatsApp.</p>
-      <div class="cta-row">
-        <a class="btn btn-primary btn-lg" href="https://app.izi-sendz.cloud/signup">Tester gratuitement</a>
-        <a class="btn btn-outline btn-lg" href="https://wa.me/2250708616289">Discuter sur WhatsApp</a>
-      </div>
-    </div>
-  </section>
-
-</main>
-
-<footer class="footer">
-  <div class="container footer-grid">
+</div>
+<main id="contenu">
+<section class="page-hero">
+  <div class="hero-glow" aria-hidden="true"></div><div class="hero-grid-bg" aria-hidden="true"></div><div class="streaks" aria-hidden="true"><i style="--y:14%;--w:160px;--d:3.6s;--delay:0s"></i><i style="--y:26%;--w:240px;--d:4.2s;--delay:1.4s"></i><i style="--y:41%;--w:120px;--d:3.1s;--delay:0.6s"></i><i style="--y:58%;--w:280px;--d:4.8s;--delay:2.2s"></i><i style="--y:71%;--w:180px;--d:3.8s;--delay:0.2s"></i><i style="--y:84%;--w:140px;--d:3.3s;--delay:1.8s"></i><i style="--y:33%;--w:90px;--d:2.9s;--delay:3s"></i><i style="--y:92%;--w:220px;--d:4.4s;--delay:2.8s"></i></div>
+  <div class="wrap">
+    <p class="crumbs"><a href="index.html">Accueil</a> / Tarifs</p>
+    <h1>Un prix fixe par message. <span class="grad-text">Partout en Afrique.</span></h1>
+    <p class="lead">SMS à 15&nbsp;F&nbsp;CFA en Côte d'Ivoire et 25&nbsp;F&nbsp;CFA dans le reste de l'Afrique. WhatsApp à 5&nbsp;F&nbsp;CFA partout. Sans abonnement, sans palier, sans surprise.</p>
+    
+  </div>
+</section>
+<section class="band" id="simulateur" aria-labelledby="calc-title">
+  <div class="wrap">
+    <div class="section-head reveal"><span class="eyebrow">Votre tarif</span><h2 id="calc-title">Le prix chez vous, dans votre monnaie.</h2><p>Nous affichons d'abord le pays détecté. Choisissez-en un autre à tout moment&nbsp;: le prix s'affiche en monnaie locale, en euro et en dollar US.</p></div>
+    <div class="calc reveal" id="price-finder" data-pricing-src="data/pricing.json">
+  <div class="calc-in">
     <div>
-      <p><strong>izi sendz</strong> — Campagnes SMS et notifications WhatsApp.</p>
-      <p class="muted">Abidjan, Côte d’Ivoire — <a href="mailto:contact@izi-sendz.cloud">contact@izi-sendz.cloud</a></p>
-      <p class="muted">© 2026 izi sendz. Unités valables jusqu’épuisement.</p>
+      <label for="pf-country">Pays de destination</label>
+      <select id="pf-country"><option value="ZA">Afrique du Sud</option><option value="DZ">Algérie</option><option value="AO">Angola</option><option value="BW">Botswana</option><option value="BF">Burkina Faso</option><option value="BI">Burundi</option><option value="BJ">Bénin</option><option value="CM">Cameroun</option><option value="CV">Cap-Vert</option><option value="CF">Centrafrique</option><option value="KM">Comores</option><option value="CG">Congo</option><option value="CI" selected>Côte d'Ivoire</option><option value="DJ">Djibouti</option><option value="EG">Égypte</option><option value="ER">Érythrée</option><option value="SZ">Eswatini</option><option value="ET">Éthiopie</option><option value="GA">Gabon</option><option value="GM">Gambie</option><option value="GH">Ghana</option><option value="GN">Guinée</option><option value="GQ">Guinée équatoriale</option><option value="GW">Guinée-Bissau</option><option value="KE">Kenya</option><option value="LS">Lesotho</option><option value="LR">Liberia</option><option value="LY">Libye</option><option value="MG">Madagascar</option><option value="MW">Malawi</option><option value="ML">Mali</option><option value="MA">Maroc</option><option value="MU">Maurice</option><option value="MR">Mauritanie</option><option value="MZ">Mozambique</option><option value="NA">Namibie</option><option value="NE">Niger</option><option value="NG">Nigeria</option><option value="UG">Ouganda</option><option value="CD">RD Congo</option><option value="RW">Rwanda</option><option value="ST">Sao Tomé-et-Principe</option><option value="SC">Seychelles</option><option value="SL">Sierra Leone</option><option value="SO">Somalie</option><option value="SD">Soudan</option><option value="SS">Soudan du Sud</option><option value="SN">Sénégal</option><option value="TZ">Tanzanie</option><option value="TD">Tchad</option><option value="TG">Togo</option><option value="TN">Tunisie</option><option value="ZM">Zambie</option><option value="ZW">Zimbabwe</option></select>
+      <p class="pf-meta"><span class="chip ok" id="pf-detected" hidden>Détecté automatiquement</span> <span id="pf-currency">Monnaie locale&nbsp;: franc CFA (BCEAO) · XOF</span></p>
     </div>
-    <nav aria-label="Pied de page">
-      <a href="fonctionnalites.html">Fonctionnalités</a>
-      <a href="tarifs.html">Tarifs</a>
-      <a href="developpeurs.html">Développeurs</a>
-      <a href="index.html#faq">FAQ</a>
-      <a href="index.html#essai">Contact</a>
-    </nav>
-    <nav aria-label="Légal">
-      <a href="mentions-legales.html">Mentions légales</a>
-      <a href="confidentialite.html">Confidentialité</a>
-    </nav>
+    <div>
+      <label for="pf-range">Messages par mois</label>
+      <div class="range-val"><span id="pf-vol">1 000</span> <small>messages</small></div>
+      <input type="range" id="pf-range" min="100" max="50000" step="100" value="1000" aria-valuetext="1000 messages par mois">
+      <div class="ticks-row"><span>100</span><span>25 000</span><span>50 000</span></div>
+    </div>
+    <ul class="pf-facts">
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>Prix fixe par message, quel que soit le volume</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>Sans abonnement, crédit valable jusqu'à épuisement</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>Paiement par mobile money ou carte</li>
+    </ul>
+  </div>
+  <div class="calc-out" aria-live="polite">
+    <div class="calc-line">
+  <span class="k"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg> SMS <em>par message</em></span>
+  <span class="v" data-out="sms-local">15 F CFA</span>
+  <span class="fx"><span data-out="sms-eur">0,023 €</span><span data-out="sms-usd">0,025 $US</span></span>
+  <span class="d">Pour <b data-out="vol">1 000</b> messages&nbsp;: <b data-out="sms-tot">15 000 F CFA · 22,87 € · 24,97 $US</b></span>
+</div>
+    <div class="calc-line">
+  <span class="k"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21l1.65-3.8a9 9 0 1 1 3.4 2.9L3 21"/><path d="M9 10a.5.5 0 0 0 1 0V9a.5.5 0 0 0-1 0v1a5 5 0 0 0 5 5h1a.5.5 0 0 0 0-1h-1a.5.5 0 0 0 0 1"/></svg> WhatsApp <em>par message</em></span>
+  <span class="v" data-out="wa-local">5 F CFA</span>
+  <span class="fx"><span data-out="wa-eur">0,0076 €</span><span data-out="wa-usd">0,0083 $US</span></span>
+  <span class="d">Pour <b data-out="vol">1 000</b> messages&nbsp;: <b data-out="wa-tot">5 000 F CFA · 7,62 € · 8,32 $US</b></span>
+</div>
+    <a class="btn btn-primary btn-lg" href="https://app.izi-sendz.cloud/signup">Tester gratuitement</a>
+    <p class="pf-note">Facturation en F CFA. Montants en monnaie locale, euro et dollar US donnés à titre indicatif, taux du <span id="pf-date">24/11/2026</span>. Gros volumes&nbsp;? <a href="https://wa.me/2250708616289">Contactez-nous</a>.</p>
+  </div>
+</div>
+  </div>
+</section>
+<section class="band band-mist" id="grille" aria-labelledby="grid-title">
+  <div class="wrap">
+    <div class="section-head reveal"><span class="eyebrow">Grille complète</span><h2 id="grid-title">54 pays, un seul crédit.</h2><p>Prix par message dans chaque pays d'Afrique, en monnaie locale, en euro et en dollar US.</p></div>
+    <div class="table-tools"><label class="sr-only" for="pf-search">Rechercher un pays</label><input type="search" id="pf-search" placeholder="Rechercher un pays…" autocomplete="off"></div>
+<div class="table-wrap reveal"><table class="price-table">
+  <thead><tr><th rowspan="2">Pays</th><th rowspan="2">Monnaie</th><th class="num grp" colspan="3">SMS, par message</th><th class="num grp" colspan="3">WhatsApp, par message</th></tr>
+  <tr><th class="num">Local</th><th class="num">EUR</th><th class="num">USD</th><th class="num">Local</th><th class="num">EUR</th><th class="num">USD</th></tr></thead>
+  <tbody id="pf-table"><tr data-name="afrique du sud"><td>Afrique du Sud</td><td><code>ZAR</code></td><td class="num">0,72 ZAR</td><td class="num">0,038 €</td><td class="num">0,042 $US</td><td class="num">0,14 ZAR</td><td class="num">0,0076 €</td><td class="num">0,0083 $US</td></tr><tr data-name="algérie"><td>Algérie</td><td><code>DZD</code></td><td class="num">5,74 DZD</td><td class="num">0,038 €</td><td class="num">0,042 $US</td><td class="num">1,15 DZD</td><td class="num">0,0076 €</td><td class="num">0,0083 $US</td></tr><tr data-name="angola"><td>Angola</td><td><code>AOA</code></td><td class="num">39,43 AOA</td><td class="num">0,038 €</td><td class="num">0,042 $US</td><td class="num">7,89 AOA</td><td class="num">0,0076 €</td><td class="num">0,0083 $US</td></tr><tr data-name="botswana"><td>Botswana</td><td><code>BWP</code></td><td class="num">0,61 BWP</td><td class="num">0,038 €</td><td class="num">0,042 $US</td><td class="num">0,12 BWP</td><td class="num">0,0076 €</td><td class="num">0,0083 $US</td></tr><tr data-name="burkina faso"><td>Burkina Faso</td><td><code>XOF</code></td><td class="num">25 F CFA</td><td class="num">0,038 €</td><td class="num">0,042 $US</td><td class="num">5 F CFA</td><td class="num">0,0076 €</td><td class="num">0,0083 $US</td></tr><tr data-name="burundi"><td>Burundi</td><td><code>BIF</code></td><td class="num">126 BIF</td><td class="num">0,038 €</td><td class="num">0,042 $US</td><td class="num">25,18 BIF</td><td class="num">0,0076 €</td><td class="num">0,0083 $US</td></tr><tr data-name="bénin"><td>Bénin</td><td><code>XOF</code></td><td class="num">25 F CFA</td><td class="num">0,038 €</td><td class="num">0,042 $US</td><td class="num">5 F CFA</td><td class="num">0,0076 €</td><td class="num">0,0083 $US</td></tr><tr data-name="cameroun"><td>Cameroun</td><td><code>XAF</code></td><td class="num">25 FCFA</td><td class="num">0,038 €</td><td class="num">0,042 $US</td><td class="num">5 FCFA</td><td class="num">0,0076 €</td><td class="num">0,0083 $US</td></tr><tr data-name="cap-vert"><td>Cap-Vert</td><td><code>CVE</code></td><td class="num">4,20 CVE</td><td class="num">0,038 €</td><td class="num">0,042 $US</td><td class="num">0,84 CVE</td><td class="num">0,0076 €</td><td class="num">0,0083 $US</td></tr><tr data-name="centrafrique"><td>Centrafrique</td><td><code>XAF</code></td><td class="num">25 FCFA</td><td class="num">0,038 €</td><td class="num">0,042 $US</td><td class="num">5 FCFA</td><td class="num">0,0076 €</td><td class="num">0,0083 $US</td></tr><tr data-name="comores"><td>Comores</td><td><code>KMF</code></td><td class="num">18,75 KMF</td><td class="num">0,038 €</td><td class="num">0,042 $US</td><td class="num">3,75 KMF</td><td class="num">0,0076 €</td><td class="num">0,0083 $US</td></tr><tr data-name="congo"><td>Congo</td><td><code>XAF</code></td><td class="num">25 FCFA</td><td class="num">0,038 €</td><td class="num">0,042 $US</td><td class="num">5 FCFA</td><td class="num">0,0076 €</td><td class="num">0,0083 $US</td></tr><tr data-name="côte d'ivoire"><td>Côte d'Ivoire</td><td><code>XOF</code></td><td class="num">15 F CFA</td><td class="num">0,023 €</td><td class="num">0,025 $US</td><td class="num">5 F CFA</td><td class="num">0,0076 €</td><td class="num">0,0083 $US</td></tr><tr data-name="djibouti"><td>Djibouti</td><td><code>DJF</code></td><td class="num">7,40 DJF</td><td class="num">0,038 €</td><td class="num">0,042 $US</td><td class="num">1,48 DJF</td><td class="num">0,0076 €</td><td class="num">0,0083 $US</td></tr><tr data-name="égypte"><td>Égypte</td><td><code>EGP</code></td><td class="num">2,26 EGP</td><td class="num">0,038 €</td><td class="num">0,042 $US</td><td class="num">0,45 EGP</td><td class="num">0,0076 €</td><td class="num">0,0083 $US</td></tr><tr data-name="érythrée"><td>Érythrée</td><td><code>ERN</code></td><td class="num">0,62 ERN</td><td class="num">0,038 €</td><td class="num">0,042 $US</td><td class="num">0,12 ERN</td><td class="num">0,0076 €</td><td class="num">0,0083 $US</td></tr><tr data-name="eswatini"><td>Eswatini</td><td><code>SZL</code></td><td class="num">0,72 SZL</td><td class="num">0,038 €</td><td class="num">0,042 $US</td><td class="num">0,14 SZL</td><td class="num">0,0076 €</td><td class="num">0,0083 $US</td></tr><tr data-name="éthiopie"><td>Éthiopie</td><td><code>ETB</code></td><td class="num">6,84 ETB</td><td class="num">0,038 €</td><td class="num">0,042 $US</td><td class="num">1,37 ETB</td><td class="num">0,0076 €</td><td class="num">0,0083 $US</td></tr><tr data-name="gabon"><td>Gabon</td><td><code>XAF</code></td><td class="num">25 FCFA</td><td class="num">0,038 €</td><td class="num">0,042 $US</td><td class="num">5 FCFA</td><td class="num">0,0076 €</td><td class="num">0,0083 $US</td></tr><tr data-name="gambie"><td>Gambie</td><td><code>GMD</code></td><td class="num">3,12 GMD</td><td class="num">0,038 €</td><td class="num">0,042 $US</td><td class="num">0,62 GMD</td><td class="num">0,0076 €</td><td class="num">0,0083 $US</td></tr><tr data-name="ghana"><td>Ghana</td><td><code>GHS</code></td><td class="num">0,49 GHS</td><td class="num">0,038 €</td><td class="num">0,042 $US</td><td class="num">0,099 GHS</td><td class="num">0,0076 €</td><td class="num">0,0083 $US</td></tr><tr data-name="guinée"><td>Guinée</td><td><code>GNF</code></td><td class="num">369 GNF</td><td class="num">0,038 €</td><td class="num">0,042 $US</td><td class="num">73,84 GNF</td><td class="num">0,0076 €</td><td class="num">0,0083 $US</td></tr><tr data-name="guinée équatoriale"><td>Guinée équatoriale</td><td><code>XAF</code></td><td class="num">25 FCFA</td><td class="num">0,038 €</td><td class="num">0,042 $US</td><td class="num">5 FCFA</td><td class="num">0,0076 €</td><td class="num">0,0083 $US</td></tr><tr data-name="guinée-bissau"><td>Guinée-Bissau</td><td><code>XOF</code></td><td class="num">25 F CFA</td><td class="num">0,038 €</td><td class="num">0,042 $US</td><td class="num">5 F CFA</td><td class="num">0,0076 €</td><td class="num">0,0083 $US</td></tr><tr data-name="kenya"><td>Kenya</td><td><code>KES</code></td><td class="num">5,44 KES</td><td class="num">0,038 €</td><td class="num">0,042 $US</td><td class="num">1,09 KES</td><td class="num">0,0076 €</td><td class="num">0,0083 $US</td></tr><tr data-name="lesotho"><td>Lesotho</td><td><code>LSL</code></td><td class="num">0,72 LSL</td><td class="num">0,038 €</td><td class="num">0,042 $US</td><td class="num">0,14 LSL</td><td class="num">0,0076 €</td><td class="num">0,0083 $US</td></tr><tr data-name="liberia"><td>Liberia</td><td><code>LRD</code></td><td class="num">7,00 LRD</td><td class="num">0,038 €</td><td class="num">0,042 $US</td><td class="num">1,40 LRD</td><td class="num">0,0076 €</td><td class="num">0,0083 $US</td></tr><tr data-name="libye"><td>Libye</td><td><code>LYD</code></td><td class="num">0,27 LYD</td><td class="num">0,038 €</td><td class="num">0,042 $US</td><td class="num">0,054 LYD</td><td class="num">0,0076 €</td><td class="num">0,0083 $US</td></tr><tr data-name="madagascar"><td>Madagascar</td><td><code>MGA</code></td><td class="num">193 MGA</td><td class="num">0,038 €</td><td class="num">0,042 $US</td><td class="num">38,51 MGA</td><td class="num">0,0076 €</td><td class="num">0,0083 $US</td></tr><tr data-name="malawi"><td>Malawi</td><td><code>MWK</code></td><td class="num">72,77 MWK</td><td class="num">0,038 €</td><td class="num">0,042 $US</td><td class="num">14,55 MWK</td><td class="num">0,0076 €</td><td class="num">0,0083 $US</td></tr><tr data-name="mali"><td>Mali</td><td><code>XOF</code></td><td class="num">25 F CFA</td><td class="num">0,038 €</td><td class="num">0,042 $US</td><td class="num">5 F CFA</td><td class="num">0,0076 €</td><td class="num">0,0083 $US</td></tr><tr data-name="maroc"><td>Maroc</td><td><code>MAD</code></td><td class="num">0,42 MAD</td><td class="num">0,038 €</td><td class="num">0,042 $US</td><td class="num">0,083 MAD</td><td class="num">0,0076 €</td><td class="num">0,0083 $US</td></tr><tr data-name="maurice"><td>Maurice</td><td><code>MUR</code></td><td class="num">1,96 MUR</td><td class="num">0,038 €</td><td class="num">0,042 $US</td><td class="num">0,39 MUR</td><td class="num">0,0076 €</td><td class="num">0,0083 $US</td></tr><tr data-name="mauritanie"><td>Mauritanie</td><td><code>MRU</code></td><td class="num">1,70 MRU</td><td class="num">0,038 €</td><td class="num">0,042 $US</td><td class="num">0,34 MRU</td><td class="num">0,0076 €</td><td class="num">0,0083 $US</td></tr><tr data-name="mozambique"><td>Mozambique</td><td><code>MZN</code></td><td class="num">2,67 MZN</td><td class="num">0,038 €</td><td class="num">0,042 $US</td><td class="num">0,53 MZN</td><td class="num">0,0076 €</td><td class="num">0,0083 $US</td></tr><tr data-name="namibie"><td>Namibie</td><td><code>NAD</code></td><td class="num">0,72 NAD</td><td class="num">0,038 €</td><td class="num">0,042 $US</td><td class="num">0,14 NAD</td><td class="num">0,0076 €</td><td class="num">0,0083 $US</td></tr><tr data-name="niger"><td>Niger</td><td><code>XOF</code></td><td class="num">25 F CFA</td><td class="num">0,038 €</td><td class="num">0,042 $US</td><td class="num">5 F CFA</td><td class="num">0,0076 €</td><td class="num">0,0083 $US</td></tr><tr data-name="nigeria"><td>Nigeria</td><td><code>NGN</code></td><td class="num">56,44 NGN</td><td class="num">0,038 €</td><td class="num">0,042 $US</td><td class="num">11,29 NGN</td><td class="num">0,0076 €</td><td class="num">0,0083 $US</td></tr><tr data-name="ouganda"><td>Ouganda</td><td><code>UGX</code></td><td class="num">171 UGX</td><td class="num">0,038 €</td><td class="num">0,042 $US</td><td class="num">34,16 UGX</td><td class="num">0,0076 €</td><td class="num">0,0083 $US</td></tr><tr data-name="rd congo"><td>RD Congo</td><td><code>CDF</code></td><td class="num">97,18 CDF</td><td class="num">0,038 €</td><td class="num">0,042 $US</td><td class="num">19,44 CDF</td><td class="num">0,0076 €</td><td class="num">0,0083 $US</td></tr><tr data-name="rwanda"><td>Rwanda</td><td><code>RWF</code></td><td class="num">61,89 RWF</td><td class="num">0,038 €</td><td class="num">0,042 $US</td><td class="num">12,38 RWF</td><td class="num">0,0076 €</td><td class="num">0,0083 $US</td></tr><tr data-name="sao tomé-et-principe"><td>Sao Tomé-et-Principe</td><td><code>STN</code></td><td class="num">0,93 STN</td><td class="num">0,038 €</td><td class="num">0,042 $US</td><td class="num">0,19 STN</td><td class="num">0,0076 €</td><td class="num">0,0083 $US</td></tr><tr data-name="seychelles"><td>Seychelles</td><td><code>SCR</code></td><td class="num">0,60 SCR</td><td class="num">0,038 €</td><td class="num">0,042 $US</td><td class="num">0,12 SCR</td><td class="num">0,0076 €</td><td class="num">0,0083 $US</td></tr><tr data-name="sierra leone"><td>Sierra Leone</td><td><code>SLE</code></td><td class="num">0,95 SLE</td><td class="num">0,038 €</td><td class="num">0,042 $US</td><td class="num">0,19 SLE</td><td class="num">0,0076 €</td><td class="num">0,0083 $US</td></tr><tr data-name="somalie"><td>Somalie</td><td><code>SOS</code></td><td class="num">23,94 SOS</td><td class="num">0,038 €</td><td class="num">0,042 $US</td><td class="num">4,79 SOS</td><td class="num">0,0076 €</td><td class="num">0,0083 $US</td></tr><tr data-name="soudan"><td>Soudan</td><td><code>SDG</code></td><td class="num">18,71 SDG</td><td class="num">0,038 €</td><td class="num">0,042 $US</td><td class="num">3,74 SDG</td><td class="num">0,0076 €</td><td class="num">0,0083 $US</td></tr><tr data-name="soudan du sud"><td>Soudan du Sud</td><td><code>SSP</code></td><td class="num">239 SSP</td><td class="num">0,038 €</td><td class="num">0,042 $US</td><td class="num">47,88 SSP</td><td class="num">0,0076 €</td><td class="num">0,0083 $US</td></tr><tr data-name="sénégal"><td>Sénégal</td><td><code>XOF</code></td><td class="num">25 F CFA</td><td class="num">0,038 €</td><td class="num">0,042 $US</td><td class="num">5 F CFA</td><td class="num">0,0076 €</td><td class="num">0,0083 $US</td></tr><tr data-name="tanzanie"><td>Tanzanie</td><td><code>TZS</code></td><td class="num">110 TZS</td><td class="num">0,038 €</td><td class="num">0,042 $US</td><td class="num">22,08 TZS</td><td class="num">0,0076 €</td><td class="num">0,0083 $US</td></tr><tr data-name="tchad"><td>Tchad</td><td><code>XAF</code></td><td class="num">25 FCFA</td><td class="num">0,038 €</td><td class="num">0,042 $US</td><td class="num">5 FCFA</td><td class="num">0,0076 €</td><td class="num">0,0083 $US</td></tr><tr data-name="togo"><td>Togo</td><td><code>XOF</code></td><td class="num">25 F CFA</td><td class="num">0,038 €</td><td class="num">0,042 $US</td><td class="num">5 F CFA</td><td class="num">0,0076 €</td><td class="num">0,0083 $US</td></tr><tr data-name="tunisie"><td>Tunisie</td><td><code>TND</code></td><td class="num">0,13 TND</td><td class="num">0,038 €</td><td class="num">0,042 $US</td><td class="num">0,026 TND</td><td class="num">0,0076 €</td><td class="num">0,0083 $US</td></tr><tr data-name="zambie"><td>Zambie</td><td><code>ZMW</code></td><td class="num">0,86 ZMW</td><td class="num">0,038 €</td><td class="num">0,042 $US</td><td class="num">0,17 ZMW</td><td class="num">0,0076 €</td><td class="num">0,0083 $US</td></tr><tr data-name="zimbabwe"><td>Zimbabwe</td><td><code>ZWG</code></td><td class="num">1,11 ZWG</td><td class="num">0,038 €</td><td class="num">0,042 $US</td><td class="num">0,22 ZWG</td><td class="num">0,0076 €</td><td class="num">0,0083 $US</td></tr></tbody></table></div>
+    <p class="fineprint">Prix fixes facturés en F CFA. Les équivalents en monnaie locale, EUR et USD sont indicatifs et suivent les taux de change publiés. 1 SMS de 160 caractères = 1 unité. Les SMS non délivrés par l'opérateur ne sont pas remboursés&nbsp;: le statut exact de chacun est affiché dans votre espace. Gros volumes&nbsp;? <a href="https://wa.me/2250708616289">Contactez-nous</a>.</p>
+  </div>
+</section>
+<section class="band"><div class="wrap"><div class="final on-ink reveal"><div class="streaks" aria-hidden="true"><i style="--y:14%;--w:160px;--d:3.6s;--delay:0s"></i><i style="--y:26%;--w:240px;--d:4.2s;--delay:1.4s"></i><i style="--y:41%;--w:120px;--d:3.1s;--delay:0.6s"></i><i style="--y:58%;--w:280px;--d:4.8s;--delay:2.2s"></i><i style="--y:71%;--w:180px;--d:3.8s;--delay:0.2s"></i><i style="--y:84%;--w:140px;--d:3.3s;--delay:1.8s"></i><i style="--y:33%;--w:90px;--d:2.9s;--delay:3s"></i><i style="--y:92%;--w:220px;--d:4.4s;--delay:2.8s"></i></div>
+  <h2>Prêt à envoyer vos premiers messages&nbsp;?</h2>
+  <p>Un seul contrat, un seul crédit&nbsp;: SMS et WhatsApp. Créez votre compte ou parlons de votre projet.</p>
+  <div class="cta-row"><a class="btn btn-primary btn-lg" href="https://app.izi-sendz.cloud/signup">Tester gratuitement <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a><a class="btn btn-outline btn-lg" href="https://wa.me/2250708616289"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21l1.65-3.8a9 9 0 1 1 3.4 2.9L3 21"/><path d="M9 10a.5.5 0 0 0 1 0V9a.5.5 0 0 0-1 0v1a5 5 0 0 0 5 5h1a.5.5 0 0 0 0-1h-1a.5.5 0 0 0 0 1"/></svg> Discuter sur WhatsApp</a></div>
+</div></div></section>
+</main>
+<footer class="footer flush">
+  <div class="wrap">
+    <div class="footer-top">
+      <div>
+        <a class="brand" href="index.html"><img src="assets/logo-mark.png" alt="" width="44" height="30"><span>izi <b>sendz</b></span></a>
+        <p>Campagnes SMS, notifications WhatsApp et API d'envoi pour toute l'Afrique. Un seul contrat, un seul crédit.</p>
+      </div>
+      <div><h4>Produit</h4><nav aria-label="Produit">
+        <a href="fonctionnalites.html">Fonctionnalités</a><a href="index.html#cas-usage">Cas d'usage</a><a href="tarifs.html">Tarifs</a><a href="index.html#couverture">Couverture</a>
+      </nav></div>
+      <div><h4>Développeurs</h4><nav aria-label="Développeurs">
+        <a href="developpeurs.html">Contrat d'envoi</a><a href="developpeurs.html#otp">OTP via API</a><a href="developpeurs.html#statuts">Statuts &amp; webhooks</a><a href="https://app.izi-sendz.cloud/signup">Clé test</a>
+      </nav></div>
+      <div><h4>Contact</h4><nav aria-label="Contact">
+        <a href="mailto:contact@izi-sendz.cloud">contact@izi-sendz.cloud</a><a href="https://wa.me/2250708616289">WhatsApp</a><a href="index.html#faq">FAQ</a><a href="mentions-legales.html">Mentions légales</a><a href="confidentialite.html">Confidentialité</a>
+      </nav></div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 izi sendz · Abidjan, Côte d'Ivoire</span>
+      <span>Sans abonnement · Unités valables jusqu'à épuisement</span>
+    </div>
+    <div class="footer-word" aria-hidden="true">izi sendz</div>
   </div>
 </footer>
-
-<button id="to-top" aria-label="Retour en haut">↑</button>
-
+<button class="to-top" id="to-top" type="button" aria-label="Retour en haut"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 7-7 7 7M12 19V5"/></svg></button>
+<div class="mobile-cta" id="mobile-cta"><span>Sans abonnement · Un seul crédit</span><a class="btn btn-primary" href="https://app.izi-sendz.cloud/signup">Tester</a></div>
 <script src="app.js" defer></script>
 </body>
 </html>
